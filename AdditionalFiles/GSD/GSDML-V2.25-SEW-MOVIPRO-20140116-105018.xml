@@ -1,0 +1,2463 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Mit XMLSpy v2006 sp2 U bearbeitet (http://www.altova.com) von XMLSPY 2005 Professional Ed. Release 3, Concurrent for 5 users (with SMP from 2005-05-11 to 2006-05-12) (SEW-Eurodrive GmbH & Co. KG) -->
+<!-- Mit XMLSpy v2006 sp2 U bearbeitet (http://www.altova.com) von XMLSPY 2005 Professional Ed. Release 3, Concurrent for 5 users (with SMP from 2005-05-11 to 2006-05-12) (SEW-Eurodrive GmbH & Co. KG) -->
+<!-- Mit XMLSpy v2006 sp2 U bearbeitet (http://www.altova.com) von XMLSPY 2005 Professional Ed. Release 3, Concurrent for 5 users (with SMP from 2005-05-11 to 2006-05-12) (SEW-Eurodrive GmbH & Co. KG) -->
+<!-- Mit XMLSpy v2006 sp2 U bearbeitet (http://www.altova.com) von XMLSPY 2005 Professional Ed. Release 3, Concurrent for 5 users (with SMP from 2005-05-11 to 2006-05-12) (SEW-Eurodrive GmbH & Co. KG) -->
+<!--History:-->
+<!--GSDML-2.1-SEW-MOVIPRO-20070316.xml: Serienversion für Movipro mit DHR41B, Änderungen von 20070316 auf 20070317: SubmoduleIDs PDEV-->
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\..\XSD\GSDML-DeviceProfile-v2.25.xsd">
+	<ProfileHeader>
+		<ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+		<ProfileRevision>1.00</ProfileRevision>
+		<ProfileName>Device Profile for PROFINET Devices</ProfileName>
+		<ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>4</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>GSDML</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity VendorID="0x010A" DeviceID="0x0004">
+			<InfoText TextId="SEW MOVIPRO"/>
+			<VendorName Value="SEW"/>
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Family MainFamily="Drives" ProductFamily="SEW"/>
+		</DeviceFunction>
+		<ApplicationProcess>
+			<DeviceAccessPointList>
+				<DeviceAccessPointItem DeviceAccessSupported="true" ID="MOVIPRO1" PhysicalSlots="0..17" ModuleIdentNumber="0x000000F9" MinDeviceInterval="128" ImplementationType="NetArm" ExtendedAddressAssignmentSupported="false" DNS_CompatibleName="SEW-MOVIPRO" FixedInSlots="0" ObjectUUID_LocalIndex="1" RequiredSchemaVersion="V2.1" WebServer="http://:80/">
+					<ModuleInfo CategoryRef="Profinet IO Anschaltung">
+						<Name TextId="MOVIPRO1"/>
+						<InfoText TextId="MOVIPRO1 mit PROFINET IO Interface"/>
+						<VendorName Value="SEW"/>
+						<OrderNumber Value="182x xxx x"/>
+						<HardwareRelease Value="V10"/>
+						<SoftwareRelease Value="V1.0"/>
+					</ModuleInfo>
+					<IOConfigData MaxInputLength="512" MaxOutputLength="512"/>
+					<UseableModules>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+						<ModuleItemRef ModuleItemTarget="1" AllowedInSlots="1..17" UsedInSlots="1 3..17"/>
+						<ModuleItemRef ModuleItemTarget="2" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="3" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="4" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="5" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="6" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="7" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="8" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="9" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="10" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="11" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="12" AllowedInSlots="2..17" UsedInSlots="2"/>
+						<ModuleItemRef ModuleItemTarget="13" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="14" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="15" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="16" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="17" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="18" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="19" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="20" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="21" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="22" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="23" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="24" AllowedInSlots="1"/>
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MOVIPRO" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="8200" Length="4" TransferSequence="0">
+									<Name TextId="Alarmeinstellung DAP"/>
+									<Const Data="0x00,0x00,0x00,0x00" ByteOffset="0"/>
+									<!--Diese Referenzen zeigen auf Einträge der ValueList -->
+									<Ref ValueItemTarget="DiagAlarmEnabling" DataType="Bit" ByteOffset="0" BitOffset="0" DefaultValue="0" Changeable="true" Visible="true" TextId="ID_DiagAlarmEnabling"/>
+									<Ref ValueItemTarget="DiagAlarmPort1" DataType="Bit" ByteOffset="0" BitOffset="1" DefaultValue="0" Changeable="true" Visible="true" TextId="ID_DiagAlarmPort1"/>
+									<Ref ValueItemTarget="DiagAlarmPort2" DataType="Bit" ByteOffset="0" BitOffset="2" DefaultValue="0" Changeable="true" Visible="true" TextId="ID_DiagAlarmPort2"/>
+									<Ref ValueItemTarget="BdDxAlarmPort1" DataType="Bit" ByteOffset="0" BitOffset="3" DefaultValue="0" Changeable="true" Visible="true" TextId="ID_BdDxAlarmPort1"/>
+									<Ref ValueItemTarget="BdDxAlarmPort2" DataType="Bit" ByteOffset="0" BitOffset="4" DefaultValue="0" Changeable="true" Visible="true" TextId="ID_BdDxAlarmPort2"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="Profinet IO Anschaltung">
+								<Name TextId="MOVIPRO1"/>
+								<InfoText TextId="MOVIPRO1 mit PROFINET IO Interface"/>
+								<VendorName Value="SEW"/>
+								<OrderNumber Value="182x xxx x"/>
+								<HardwareRelease Value="V10"/>
+								<SoftwareRelease Value="V1.0"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1"/>
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem DeviceAccessSupported="true" ID="MOVIPRO1 PDEV V70" PhysicalSlots="0..17" ModuleIdentNumber="0x000000F9" MinDeviceInterval="128" ImplementationType="NetArm" ExtendedAddressAssignmentSupported="false" DNS_CompatibleName="SEW-MOVIPRO" FixedInSlots="0" ObjectUUID_LocalIndex="1" RequiredSchemaVersion="V2.1" WebServer="http://:80/">
+					<ModuleInfo CategoryRef="Profinet IO Anschaltung">
+						<Name TextId="MOVIPRO1 PDEV V70"/>
+						<InfoText TextId="MOVIPROAM mit PROFINET IO Interface PDEV"/>
+						<VendorName Value="SEW"/>
+						<OrderNumber Value="182x xxx x"/>
+						<HardwareRelease Value="V10"/>
+						<SoftwareRelease Value="V7.0"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="PDEV_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="PDEV_Port1"/>
+						<SubslotItem SubslotNumber="32770" TextId="PDEV_Port2"/>
+					</SubslotList>
+					<IOConfigData MaxInputLength="512" MaxOutputLength="512"/>
+					<UseableModules>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+						<ModuleItemRef ModuleItemTarget="1" AllowedInSlots="1..17" UsedInSlots="1 3..17"/>
+						<ModuleItemRef ModuleItemTarget="2" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="3" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="4" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="5" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="6" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="7" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="8" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="9" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="10" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="11" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="12" AllowedInSlots="2..17" UsedInSlots="2"/>
+						<ModuleItemRef ModuleItemTarget="13" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="14" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="15" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="16" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="17" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="18" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="19" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="20" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="21" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="22" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="23" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="24" AllowedInSlots="1"/>
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MOVIPRO PDEV V70" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="8200" Length="4" TransferSequence="0">
+									<Name TextId="Alarmeinstellung DAP"/>
+									<Const Data="0x00,0x00,0x00,0x00" ByteOffset="0"/>
+									<!--Diese Referenzen zeigen auf Einträge der ValueList -->
+									<Ref ValueItemTarget="DiagAlarmEnabling" DataType="Bit" ByteOffset="0" BitOffset="0" DefaultValue="0" Changeable="true" Visible="true" TextId="ID_DiagAlarmEnabling"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="Profinet IO Anschaltung">
+								<Name TextId="MOVIPRO1 PDEV V70"/>
+								<InfoText TextId="MOVIPROAM mit PROFINET IO Interface PDEV"/>
+								<VendorName Value="SEW"/>
+								<OrderNumber Value="182x xxx x"/>
+								<HardwareRelease Value="V10"/>
+								<SoftwareRelease Value="V7.0"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem ID="MPROSubmoduleItem70" SubslotNumber="32768" SubmoduleIdentNumber="0x0000" SupportedRT_Classes="RT_CLASS_1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" TextId="T_DAP_InterfaceModule" IsochroneModeSupported="false">
+							<ApplicationRelations NumberOfAdditionalInputCR="0" NumberOfAdditionalMulticastProviderCR="0" NumberOfAdditionalOutputCR="0" NumberOfMulticastConsumerCR="0">
+								<TimingProperties SendClock="32" ReductionRatio="4 8 16 32 64 128 256 512"/>
+							</ApplicationRelations>
+						</InterfaceSubmoduleItem>
+						<PortSubmoduleItem ID="MPRO70PortSubmoduleItemPdev1" SubslotNumber="32769" SubmoduleIdentNumber="0x0000" TextId="T_Port1" LinkStateDiagnosisCapability="Up+Down"/>
+						<PortSubmoduleItem ID="MPRO70PortSubmoduleItemPdev2" SubslotNumber="32770" SubmoduleIdentNumber="0x0000" TextId="T_Port2" LinkStateDiagnosisCapability="Up+Down"/>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1"/>
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem DeviceAccessSupported="true" ID="MOVIPRO1 PDEV MRP V77" PhysicalSlots="0..17" ModuleIdentNumber="0x000000F9" MinDeviceInterval="128" ImplementationType="NetArm" ExtendedAddressAssignmentSupported="false" DNS_CompatibleName="SEW-MOVIPRO" FixedInSlots="0" ObjectUUID_LocalIndex="1" RequiredSchemaVersion="V2.1" WebServer="http://:80/">
+					<ModuleInfo CategoryRef="Profinet IO Anschaltung">
+						<Name TextId="MOVIPRO1 PDEV MRP V77"/>
+						<InfoText TextId="MOVIPROAM mit PROFINET IO Interface PDEV MRP"/>
+						<VendorName Value="SEW"/>
+						<OrderNumber Value="182x xxx x"/>
+						<HardwareRelease Value="V10"/>
+						<SoftwareRelease Value="V7.7"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="PDEV_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="PDEV_Port1"/>
+						<SubslotItem SubslotNumber="32770" TextId="PDEV_Port2"/>
+					</SubslotList>
+					<IOConfigData MaxInputLength="512" MaxOutputLength="512"/>
+					<UseableModules>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+						<ModuleItemRef ModuleItemTarget="1" AllowedInSlots="1..17" UsedInSlots="1 3..17"/>
+						<ModuleItemRef ModuleItemTarget="2" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="3" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="4" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="5" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="6" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="7" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="8" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="9" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="10" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="11" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="12" AllowedInSlots="2..17" UsedInSlots="2"/>
+						<ModuleItemRef ModuleItemTarget="13" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="14" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="15" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="16" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="17" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="18" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="19" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="20" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="21" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="22" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="23" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="24" AllowedInSlots="1"/>
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MOVIPRO PDEV MRP V77" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="8200" Length="4" TransferSequence="0">
+									<Name TextId="Alarmeinstellung DAP"/>
+									<Const Data="0x00,0x00,0x00,0x00" ByteOffset="0"/>
+									<!--Diese Referenzen zeigen auf Einträge der ValueList -->
+									<Ref ValueItemTarget="DiagAlarmEnabling" DataType="Bit" ByteOffset="0" BitOffset="0" DefaultValue="0" Changeable="true" Visible="true" TextId="ID_DiagAlarmEnabling"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="Profinet IO Anschaltung">
+								<Name TextId="MOVIPRO1 PDEV MRP V77"/>
+								<InfoText TextId="MOVIPROAM mit PROFINET IO Interface PDEV MRP"/>
+								<VendorName Value="SEW"/>
+								<OrderNumber Value="182x xxx x"/>
+								<HardwareRelease Value="V10"/>
+								<SoftwareRelease Value="V7.7"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem ID="MPROSubmoduleItem77" SubslotNumber="32768" SubmoduleIdentNumber="0x0001" SupportedRT_Classes="RT_CLASS_1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" TextId="T_DAP_InterfaceModule" IsochroneModeSupported="false">
+							<ApplicationRelations NumberOfAdditionalInputCR="0" NumberOfAdditionalMulticastProviderCR="0" NumberOfAdditionalOutputCR="0" NumberOfMulticastConsumerCR="0">
+								<TimingProperties SendClock="32" ReductionRatio="4 8 16 32 64 128 256 512"/>
+							</ApplicationRelations>
+							<MediaRedundancy SupportedRole="Client"/>
+						</InterfaceSubmoduleItem>
+						<PortSubmoduleItem ID="MPRO77PortSubmoduleItemPdev1" SubslotNumber="32769" SubmoduleIdentNumber="0x0002" TextId="T_Port1" LinkStateDiagnosisCapability="Up+Down" IsDefaultRingport="true"/>
+						<PortSubmoduleItem ID="MPRO77PortSubmoduleItemPdev2" SubslotNumber="32770" SubmoduleIdentNumber="0x0003" TextId="T_Port2" LinkStateDiagnosisCapability="Up+Down" IsDefaultRingport="true"/>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1"/>
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem DeviceAccessSupported="true" ID="MOVIPRO1 PDEV V11" PhysicalSlots="0..17" ModuleIdentNumber="0x000000F9" MinDeviceInterval="128" ImplementationType="NetArm" ExtendedAddressAssignmentSupported="false" DNS_CompatibleName="SEW-MOVIPRO" FixedInSlots="0" ObjectUUID_LocalIndex="1" RequiredSchemaVersion="V2.1" WebServer="http://:80/">
+					<ModuleInfo CategoryRef="Profinet IO Anschaltung">
+						<Name TextId="MOVIPRO1 PDEV V11"/>
+						<InfoText TextId="MOVIPRO1 mit PROFINET IO Interface PDEV"/>
+						<VendorName Value="SEW"/>
+						<OrderNumber Value="182x xxx x"/>
+						<HardwareRelease Value="V10"/>
+						<SoftwareRelease Value="V1.1"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="PDEV_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="PDEV_Port1"/>
+						<SubslotItem SubslotNumber="32770" TextId="PDEV_Port2"/>
+					</SubslotList>
+					<IOConfigData MaxInputLength="512" MaxOutputLength="512"/>
+					<UseableModules>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+						<ModuleItemRef ModuleItemTarget="1" AllowedInSlots="1..17" UsedInSlots="1 3..17"/>
+						<ModuleItemRef ModuleItemTarget="2" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="3" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="4" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="5" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="6" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="7" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="8" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="9" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="10" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="11" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="12" AllowedInSlots="2..17" UsedInSlots="2"/>
+						<ModuleItemRef ModuleItemTarget="13" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="14" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="15" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="16" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="17" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="18" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="19" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="20" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="21" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="22" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="23" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="24" AllowedInSlots="1"/>
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MOVIPRO PDEV V11" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="8200" Length="4" TransferSequence="0">
+									<Name TextId="Alarmeinstellung DAP"/>
+									<Const Data="0x00,0x00,0x00,0x00" ByteOffset="0"/>
+									<!--Diese Referenzen zeigen auf Einträge der ValueList -->
+									<Ref ValueItemTarget="DiagAlarmEnabling" DataType="Bit" ByteOffset="0" BitOffset="0" DefaultValue="0" Changeable="true" Visible="true" TextId="ID_DiagAlarmEnabling"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="Profinet IO Anschaltung">
+								<Name TextId="MOVIPRO1 PDEV V11"/>
+								<InfoText TextId="MOVIPRO1 mit PROFINET IO Interface PDEV"/>
+								<VendorName Value="SEW"/>
+								<OrderNumber Value="182x xxx x"/>
+								<HardwareRelease Value="V10"/>
+								<SoftwareRelease Value="V1.1"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem ID="MPROSubmoduleItemPdev11" SubslotNumber="32768" SubmoduleIdentNumber="0x0001" SupportedRT_Classes="RT_CLASS_1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" TextId="T_DAP_InterfaceModule" IsochroneModeSupported="false">
+							<ApplicationRelations NumberOfAdditionalInputCR="0" NumberOfAdditionalMulticastProviderCR="0" NumberOfAdditionalOutputCR="0" NumberOfMulticastConsumerCR="0">
+								<TimingProperties SendClock="32" ReductionRatio="4 8 16 32 64 128 256 512"/>
+							</ApplicationRelations>
+						</InterfaceSubmoduleItem>
+						<PortSubmoduleItem ID="MPROPortSubmoduleItemPdev11_1" SubslotNumber="32769" SubmoduleIdentNumber="0x0002" TextId="T_Port1" LinkStateDiagnosisCapability="Up+Down"/>
+						<PortSubmoduleItem ID="MPROPortSubmoduleItemPdev11_2" SubslotNumber="32770" SubmoduleIdentNumber="0x0003" TextId="T_Port2" LinkStateDiagnosisCapability="Up+Down"/>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1"/>
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem DeviceAccessSupported="true" ID="MOVIPRO1 PDEV POF V15" PhysicalSlots="0..17" ModuleIdentNumber="0x000000F9" MinDeviceInterval="128" ImplementationType="NetArm" ExtendedAddressAssignmentSupported="false" DNS_CompatibleName="SEW-MOVIPRO" FixedInSlots="0" ObjectUUID_LocalIndex="1" RequiredSchemaVersion="V2.1" WebServer="http://:80/">
+					<ModuleInfo CategoryRef="Profinet IO Anschaltung">
+						<Name TextId="MOVIPRO1 PDEV POF V15"/>
+						<InfoText TextId="MOVIPRO1 mit PROFINET IO Interface PDEV POF"/>
+						<VendorName Value="SEW"/>
+						<OrderNumber Value="182x xxx x"/>
+						<HardwareRelease Value="V10"/>
+						<SoftwareRelease Value="V1.5"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="PDEV_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="PDEV_Port1"/>
+						<SubslotItem SubslotNumber="32770" TextId="PDEV_Port2"/>
+					</SubslotList>
+					<IOConfigData MaxInputLength="512" MaxOutputLength="512"/>
+					<UseableModules>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+						<ModuleItemRef ModuleItemTarget="1" AllowedInSlots="1..17" UsedInSlots="1 3..17"/>
+						<ModuleItemRef ModuleItemTarget="2" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="3" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="4" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="5" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="6" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="7" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="8" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="9" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="10" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="11" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="12" AllowedInSlots="2..17" UsedInSlots="2"/>
+						<ModuleItemRef ModuleItemTarget="13" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="14" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="15" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="16" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="17" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="18" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="19" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="20" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="21" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="22" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="23" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="24" AllowedInSlots="1"/>
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MOVIPRO PDEV POF V15" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="8200" Length="4" TransferSequence="0">
+									<Name TextId="Alarmeinstellung DAP"/>
+									<Const Data="0x00,0x00,0x00,0x00" ByteOffset="0"/>
+									<!--Diese Referenzen zeigen auf Einträge der ValueList -->
+									<Ref ValueItemTarget="DiagAlarmEnabling" DataType="Bit" ByteOffset="0" BitOffset="0" DefaultValue="0" Changeable="true" Visible="true" TextId="ID_DiagAlarmEnabling"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="Profinet IO Anschaltung">
+								<Name TextId="MOVIPRO1 PDEV POF V15"/>
+								<InfoText TextId="MOVIPRO1 mit PROFINET IO Interface PDEV POF"/>
+								<VendorName Value="SEW"/>
+								<OrderNumber Value="182x xxx x"/>
+								<HardwareRelease Value="V10"/>
+								<SoftwareRelease Value="V1.5"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem ID="MPROSubmoduleItemPdev15" SubslotNumber="32768" SubmoduleIdentNumber="0x0001" SupportedRT_Classes="RT_CLASS_1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" TextId="T_DAP_InterfaceModule" IsochroneModeSupported="false">
+							<ApplicationRelations NumberOfAdditionalInputCR="0" NumberOfAdditionalMulticastProviderCR="0" NumberOfAdditionalOutputCR="0" NumberOfMulticastConsumerCR="0">
+								<TimingProperties SendClock="32" ReductionRatio="4 8 16 32 64 128 256 512"/>
+							</ApplicationRelations>
+						</InterfaceSubmoduleItem>
+						<PortSubmoduleItem ID="MPROPortSubmoduleItemPdev15_1" SubslotNumber="32769" SubmoduleIdentNumber="0x0002" MAUTypes="54" FiberOpticTypes="4 5" TextId="T_Port1_POF" PowerBudgetControlSupported="true" LinkStateDiagnosisCapability="Up+Down"/>
+						<PortSubmoduleItem ID="MPROPortSubmoduleItemPdev15_2" SubslotNumber="32770" SubmoduleIdentNumber="0x0003" MAUTypes="54" FiberOpticTypes="4 5" TextId="T_Port2_POF" PowerBudgetControlSupported="true" LinkStateDiagnosisCapability="Up+Down"/>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1"/>
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem DeviceAccessSupported="true" ID="MOVIPRO1 PDEV MRP V17" PhysicalSlots="0..17" ModuleIdentNumber="0x000000F9" MinDeviceInterval="128" ImplementationType="NetArm" ExtendedAddressAssignmentSupported="false" DNS_CompatibleName="SEW-MOVIPRO" FixedInSlots="0" ObjectUUID_LocalIndex="1" RequiredSchemaVersion="V2.1" WebServer="http://:80/">
+					<ModuleInfo CategoryRef="Profinet IO Anschaltung">
+						<Name TextId="MOVIPRO1 PDEV MRP V17"/>
+						<InfoText TextId="MOVIPRO1 mit PROFINET IO Interface PDEV MRP"/>
+						<VendorName Value="SEW"/>
+						<OrderNumber Value="182x xxx x"/>
+						<HardwareRelease Value="V10"/>
+						<SoftwareRelease Value="V1.7"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="PDEV_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="PDEV_Port1"/>
+						<SubslotItem SubslotNumber="32770" TextId="PDEV_Port2"/>
+					</SubslotList>
+					<IOConfigData MaxInputLength="512" MaxOutputLength="512"/>
+					<UseableModules>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+						<ModuleItemRef ModuleItemTarget="1" AllowedInSlots="1..17" UsedInSlots="1 3..17"/>
+						<ModuleItemRef ModuleItemTarget="2" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="3" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="4" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="5" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="6" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="7" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="8" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="9" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="10" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="11" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="12" AllowedInSlots="2..17" UsedInSlots="2"/>
+						<ModuleItemRef ModuleItemTarget="13" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="14" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="15" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="16" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="17" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="18" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="19" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="20" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="21" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="22" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="23" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="24" AllowedInSlots="1"/>
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MOVIPRO PDEV MRP V17" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="8200" Length="4" TransferSequence="0">
+									<Name TextId="Alarmeinstellung DAP"/>
+									<Const Data="0x00,0x00,0x00,0x00" ByteOffset="0"/>
+									<!--Diese Referenzen zeigen auf Einträge der ValueList -->
+									<Ref ValueItemTarget="DiagAlarmEnabling" DataType="Bit" ByteOffset="0" BitOffset="0" DefaultValue="0" Changeable="true" Visible="true" TextId="ID_DiagAlarmEnabling"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="Profinet IO Anschaltung">
+								<Name TextId="MOVIPRO1 PDEV MRP V17"/>
+								<InfoText TextId="MOVIPRO1 mit PROFINET IO Interface PDEV MRP"/>
+								<VendorName Value="SEW"/>
+								<OrderNumber Value="182x xxx x"/>
+								<HardwareRelease Value="V10"/>
+								<SoftwareRelease Value="V1.7"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem ID="MPROSubmoduleItemPdevMrp" SubslotNumber="32768" SubmoduleIdentNumber="0x0001" SupportedRT_Classes="RT_CLASS_1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" TextId="T_DAP_InterfaceModule" IsochroneModeSupported="false">
+							<ApplicationRelations NumberOfAdditionalInputCR="0" NumberOfAdditionalMulticastProviderCR="0" NumberOfAdditionalOutputCR="0" NumberOfMulticastConsumerCR="0">
+								<TimingProperties SendClock="32" ReductionRatio="4 8 16 32 64 128 256 512"/>
+							</ApplicationRelations>
+							<MediaRedundancy SupportedRole="Client"/>
+						</InterfaceSubmoduleItem>
+						<PortSubmoduleItem ID="MPROPortSubmoduleItemPdevMrp1" SubslotNumber="32769" SubmoduleIdentNumber="0x0002" TextId="T_Port1" LinkStateDiagnosisCapability="Up+Down" IsDefaultRingport="true"/>
+						<PortSubmoduleItem ID="MPROPortSubmoduleItemPdevMrp2" SubslotNumber="32770" SubmoduleIdentNumber="0x0003" TextId="T_Port2" LinkStateDiagnosisCapability="Up+Down" IsDefaultRingport="true"/>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1"/>
+					</Graphics>
+				</DeviceAccessPointItem>
+				<DeviceAccessPointItem DeviceAccessSupported="true" ID="MOVIPRO1 PDEV POF MRP V17" PhysicalSlots="0..17" ModuleIdentNumber="0x000002F9" MinDeviceInterval="128" ImplementationType="NetArm" ExtendedAddressAssignmentSupported="false" DNS_CompatibleName="SEW-MOVIPRO" FixedInSlots="0" ObjectUUID_LocalIndex="1" RequiredSchemaVersion="V2.1" WebServer="http://:80/">
+					<ModuleInfo CategoryRef="Profinet IO Anschaltung">
+						<Name TextId="MOVIPRO1 PDEV POF MRP V17"/>
+						<InfoText TextId="MOVIPRO1 mit PROFINET IO Interface PDEV POF MRP"/>
+						<VendorName Value="SEW"/>
+						<OrderNumber Value="182x xxx x"/>
+						<HardwareRelease Value="V10"/>
+						<SoftwareRelease Value="V1.7"/>
+					</ModuleInfo>
+					<SubslotList>
+						<SubslotItem SubslotNumber="32768" TextId="PDEV_Interface"/>
+						<SubslotItem SubslotNumber="32769" TextId="PDEV_Port1"/>
+						<SubslotItem SubslotNumber="32770" TextId="PDEV_Port2"/>
+					</SubslotList>
+					<IOConfigData MaxInputLength="512" MaxOutputLength="512"/>
+					<UseableModules>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+						<ModuleItemRef ModuleItemTarget="1" AllowedInSlots="1..17" UsedInSlots="1 3..17"/>
+						<ModuleItemRef ModuleItemTarget="2" AllowedInSlots="1"/>
+						<ModuleItemRef ModuleItemTarget="3" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="4" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="5" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="6" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="7" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="8" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="9" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="10" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="11" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="12" AllowedInSlots="2..17" UsedInSlots="2"/>
+						<ModuleItemRef ModuleItemTarget="13" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="14" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="15" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="16" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="17" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="18" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="19" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="20" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="21" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="22" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="23" AllowedInSlots="2..17"/>
+						<ModuleItemRef ModuleItemTarget="24" AllowedInSlots="1"/>
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="MOVIPRO PDEV POF MRP V17" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="8200" Length="4" TransferSequence="0">
+									<Name TextId="Alarmeinstellung DAP"/>
+									<Const Data="0x00,0x00,0x00,0x00" ByteOffset="0"/>
+									<!--Diese Referenzen zeigen auf Einträge der ValueList -->
+									<Ref ValueItemTarget="DiagAlarmEnabling" DataType="Bit" ByteOffset="0" BitOffset="0" DefaultValue="0" Changeable="true" Visible="true" TextId="ID_DiagAlarmEnabling"/>
+								</ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="Profinet IO Anschaltung">
+								<Name TextId="MOVIPRO1 PDEV POF MRP V17"/>
+								<InfoText TextId="MOVIPRO1 mit PROFINET IO Interface PDEV POF MRP"/>
+								<VendorName Value="SEW"/>
+								<OrderNumber Value="182x xxx x"/>
+								<HardwareRelease Value="V10"/>
+								<SoftwareRelease Value="V1.7"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<SystemDefinedSubmoduleList>
+						<InterfaceSubmoduleItem ID="MPROSubmoduleItemPdev17" SubslotNumber="32768" SubmoduleIdentNumber="0x0001" SupportedRT_Classes="RT_CLASS_1" SupportedProtocols="SNMP;LLDP" SupportedMibs="MIB2" TextId="T_DAP_InterfaceModule" IsochroneModeSupported="false">
+							<ApplicationRelations NumberOfAdditionalInputCR="0" NumberOfAdditionalMulticastProviderCR="0" NumberOfAdditionalOutputCR="0" NumberOfMulticastConsumerCR="0">
+								<TimingProperties SendClock="32" ReductionRatio="4 8 16 32 64 128 256 512"/>
+							</ApplicationRelations>
+							<MediaRedundancy SupportedRole="Client"/>
+						</InterfaceSubmoduleItem>
+						<PortSubmoduleItem ID="MPROPortSubmoduleItemPdev17_1" SubslotNumber="32769" SubmoduleIdentNumber="0x0002" MAUTypes="54" FiberOpticTypes="4 5" TextId="T_Port1_POF" PowerBudgetControlSupported="true" LinkStateDiagnosisCapability="Up+Down" IsDefaultRingport="true"/>
+						<PortSubmoduleItem ID="MPROPortSubmoduleItemPdev17_2" SubslotNumber="32770" SubmoduleIdentNumber="0x0003" MAUTypes="54" FiberOpticTypes="4 5" TextId="T_Port2_POF" PowerBudgetControlSupported="true" LinkStateDiagnosisCapability="Up+Down" IsDefaultRingport="true"/>
+					</SystemDefinedSubmoduleList>
+					<Graphics>
+						<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1"/>
+					</Graphics>
+				</DeviceAccessPointItem>
+			</DeviceAccessPointList>
+			<ModuleList>
+				<!--Leer - Modul-->
+				<ModuleItem ID="1" ModuleIdentNumber="0x000000FF">
+					<ModuleInfo>
+						<Name TextId="Leermodul"/>
+						<InfoText TextId="Info Leermodul"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="1" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1"/>
+							<RecordDataList/>
+							<ModuleInfo>
+								<Name TextId="Leermodul"/>
+								<InfoText TextId="Info Leermodul"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<!--Profisafe Optionen-->
+				<ModuleItem ID="2" ModuleIdentNumber="0x00000070">
+					<ModuleInfo CategoryRef="Safety Module">
+						<Name TextId="F-Modul I/O (2 Byte)"/>
+						<InfoText TextId="Safety Module I/O (2 Byte)"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="22" SubmoduleIdentNumber="0x00000000" PROFIsafeSupported="true">
+							<!--Profisafe Slot-->
+							<IOData IOPS_Length="1" IOCS_Length="1" F_IO_StructureDescCRC="5639">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" UseAsBits="true" TextId="FDI"/>
+									<DataItem DataType="F_MessageTrailer4Byte" TextId="Safety"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" UseAsBits="true" TextId="FDO"/>
+									<DataItem DataType="F_MessageTrailer4Byte" TextId="Safety"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="8200" Length="4" TransferSequence="0">
+									<Name TextId="Alarmeinstellung SLOT"/>
+									<Const Data="0x00,0x00,0x00,0x00" ByteOffset="0"/>
+									<!--Diese Referenzen zeigen auf Einträge der ValueList -->
+									<Ref ValueItemTarget="DiagAlarmEnabling" DataType="Bit" ByteOffset="0" BitOffset="0" DefaultValue="0" Changeable="true" Visible="true" TextId="ID_DiagAlarmEnabling"/>
+								</ParameterRecordDataItem>
+								<F_ParameterRecordDataItem F_ParamDescCRC="42070" Index="1">
+									<F_Check_iPar/>
+									<F_SIL DefaultValue="SIL3" AllowedValues="SIL3" Visible="true" Changeable="false"/>
+									<F_CRC_Length DefaultValue="3-Byte-CRC" AllowedValues="3-Byte-CRC" Visible="true" Changeable="false"/>
+									<!--Null bedeutet Parameter Set for F-Host F-Device Relation-->
+									<F_Block_ID DefaultValue="0"/>
+									<F_Par_Version/>
+									<F_Source_Add AllowedValues="1..65534"/>
+									<!--9 Bit Adresse-->
+									<F_Dest_Add AllowedValues="1..65534"/>
+									<!--F - Watchdog - Zeit in ms-->
+									<F_WD_Time DefaultValue="150" AllowedValues="1..65535"/>
+									<!--CRC über die Parameterwerte-->
+									<F_Par_CRC DefaultValue="48021"/>
+								</F_ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="Safety Module">
+								<Name TextId="F-Modul I/O (2 Byte)"/>
+								<InfoText TextId="Safety Module I/O (2 Byte)"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="24" ModuleIdentNumber="0x0000007C">
+					<ModuleInfo CategoryRef="Safety Module">
+						<Name TextId="F-Modul I/O (12 Byte)"/>
+						<InfoText TextId="Safety Module I/O (12 Byte)"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="24" SubmoduleIdentNumber="0x00000000" PROFIsafeSupported="true">
+							<!--Profisafe Slot-->
+							<IOData IOPS_Length="1" IOCS_Length="1" F_IO_StructureDescCRC="29691">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned32" UseAsBits="true" TextId="FPI1"/>
+									<DataItem DataType="Unsigned32" UseAsBits="true" TextId="FPI2"/>
+									<DataItem DataType="Integer16" UseAsBits="false" TextId="FDI1"/>
+									<DataItem DataType="Integer16" UseAsBits="false" TextId="FDI2"/>
+									<DataItem DataType="F_MessageTrailer4Byte" TextId="Safety"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned32" UseAsBits="true" TextId="FPO1"/>
+									<DataItem DataType="Unsigned32" UseAsBits="true" TextId="FPO2"/>
+									<DataItem DataType="Integer16" UseAsBits="false" TextId="FDO1"/>
+									<DataItem DataType="Integer16" UseAsBits="false" TextId="FDO2"/>
+									<DataItem DataType="F_MessageTrailer4Byte" TextId="Safety"/>
+								</Output>
+							</IOData>
+							<RecordDataList>
+								<ParameterRecordDataItem Index="8200" Length="4" TransferSequence="0">
+									<Name TextId="Alarmeinstellung SLOT"/>
+									<Const Data="0x00,0x00,0x00,0x00" ByteOffset="0"/>
+									<!--Diese Referenzen zeigen auf Einträge der ValueList -->
+									<Ref ValueItemTarget="DiagAlarmEnabling" DataType="Bit" ByteOffset="0" BitOffset="0" DefaultValue="0" Changeable="true" Visible="true" TextId="ID_DiagAlarmEnabling"/>
+								</ParameterRecordDataItem>
+								<F_ParameterRecordDataItem F_ParamDescCRC="42070" Index="1">
+									<F_Check_iPar/>
+									<F_SIL DefaultValue="SIL3" AllowedValues="SIL3" Visible="true" Changeable="false"/>
+									<F_CRC_Length DefaultValue="3-Byte-CRC" AllowedValues="3-Byte-CRC" Visible="true" Changeable="false"/>
+									<!--Null bedeutet Parameter Set for F-Host F-Device Relation-->
+									<F_Block_ID DefaultValue="0"/>
+									<F_Par_Version/>
+									<F_Source_Add AllowedValues="1..65534"/>
+									<!--9 Bit Adresse-->
+									<F_Dest_Add AllowedValues="1..65534"/>
+									<!--F - Watchdog - Zeit in ms-->
+									<F_WD_Time DefaultValue="150" AllowedValues="1..65535"/>
+									<!--CRC über die Parameterwerte-->
+									<F_Par_CRC DefaultValue="48021"/>
+								</F_ParameterRecordDataItem>
+							</RecordDataList>
+							<ModuleInfo CategoryRef="Safety Module">
+								<Name TextId="F-Modul I/O (12 Byte)"/>
+								<InfoText TextId="Safety Module I/O (12 Byte)"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<!--Prozessdaten für PLC-->
+				<ModuleItem ID="3" ModuleIdentNumber="0x00000065">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="1PD"/>
+						<InfoText TextId="1PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="2" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="1PD"/>
+								<InfoText TextId="1PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="4" ModuleIdentNumber="0x00000066">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="2PD"/>
+						<InfoText TextId="2PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="3" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="2PD"/>
+								<InfoText TextId="2PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="5" ModuleIdentNumber="0x00000067">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="3PD"/>
+						<InfoText TextId="3PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="4" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+									<DataItem DataType="Unsigned16" TextId="PI2"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+									<DataItem DataType="Unsigned16" TextId="PO2"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="3PD"/>
+								<InfoText TextId="3PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="6" ModuleIdentNumber="0x00000068">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="4PD"/>
+						<InfoText TextId="4PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="5" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+									<DataItem DataType="Unsigned16" TextId="PI2"/>
+									<DataItem DataType="Unsigned16" TextId="PI3"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+									<DataItem DataType="Unsigned16" TextId="PO2"/>
+									<DataItem DataType="Unsigned16" TextId="PO3"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="4PD"/>
+								<InfoText TextId="4PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="7" ModuleIdentNumber="0x00000069">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="5PD"/>
+						<InfoText TextId="5PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="6" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+									<DataItem DataType="Unsigned16" TextId="PI2"/>
+									<DataItem DataType="Unsigned16" TextId="PI3"/>
+									<DataItem DataType="Unsigned16" TextId="PI4"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+									<DataItem DataType="Unsigned16" TextId="PO2"/>
+									<DataItem DataType="Unsigned16" TextId="PO3"/>
+									<DataItem DataType="Unsigned16" TextId="PO4"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="5PD"/>
+								<InfoText TextId="5PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="8" ModuleIdentNumber="0x0000006A">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="6PD"/>
+						<InfoText TextId="6PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="7" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+									<DataItem DataType="Unsigned16" TextId="PI2"/>
+									<DataItem DataType="Unsigned16" TextId="PI3"/>
+									<DataItem DataType="Unsigned16" TextId="PI4"/>
+									<DataItem DataType="Unsigned16" TextId="PI5"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+									<DataItem DataType="Unsigned16" TextId="PO2"/>
+									<DataItem DataType="Unsigned16" TextId="PO3"/>
+									<DataItem DataType="Unsigned16" TextId="PO4"/>
+									<DataItem DataType="Unsigned16" TextId="PO5"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="6PD"/>
+								<InfoText TextId="6PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="9" ModuleIdentNumber="0x0000006B">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="7PD"/>
+						<InfoText TextId="7PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="8" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+									<DataItem DataType="Unsigned16" TextId="PI2"/>
+									<DataItem DataType="Unsigned16" TextId="PI3"/>
+									<DataItem DataType="Unsigned16" TextId="PI4"/>
+									<DataItem DataType="Unsigned16" TextId="PI5"/>
+									<DataItem DataType="Unsigned16" TextId="PI6"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+									<DataItem DataType="Unsigned16" TextId="PO2"/>
+									<DataItem DataType="Unsigned16" TextId="PO3"/>
+									<DataItem DataType="Unsigned16" TextId="PO4"/>
+									<DataItem DataType="Unsigned16" TextId="PO5"/>
+									<DataItem DataType="Unsigned16" TextId="PO6"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="7PD"/>
+								<InfoText TextId="7PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="10" ModuleIdentNumber="0x0000006C">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="8PD"/>
+						<InfoText TextId="8PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="9" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+									<DataItem DataType="Unsigned16" TextId="PI2"/>
+									<DataItem DataType="Unsigned16" TextId="PI3"/>
+									<DataItem DataType="Unsigned16" TextId="PI4"/>
+									<DataItem DataType="Unsigned16" TextId="PI5"/>
+									<DataItem DataType="Unsigned16" TextId="PI6"/>
+									<DataItem DataType="Unsigned16" TextId="PI7"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+									<DataItem DataType="Unsigned16" TextId="PO2"/>
+									<DataItem DataType="Unsigned16" TextId="PO3"/>
+									<DataItem DataType="Unsigned16" TextId="PO4"/>
+									<DataItem DataType="Unsigned16" TextId="PO5"/>
+									<DataItem DataType="Unsigned16" TextId="PO6"/>
+									<DataItem DataType="Unsigned16" TextId="PO7"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="8PD"/>
+								<InfoText TextId="8PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="11" ModuleIdentNumber="0x0000006D">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="9PD"/>
+						<InfoText TextId="9PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="10" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+									<DataItem DataType="Unsigned16" TextId="PI2"/>
+									<DataItem DataType="Unsigned16" TextId="PI3"/>
+									<DataItem DataType="Unsigned16" TextId="PI4"/>
+									<DataItem DataType="Unsigned16" TextId="PI5"/>
+									<DataItem DataType="Unsigned16" TextId="PI6"/>
+									<DataItem DataType="Unsigned16" TextId="PI7"/>
+									<DataItem DataType="Unsigned16" TextId="PI8"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+									<DataItem DataType="Unsigned16" TextId="PO2"/>
+									<DataItem DataType="Unsigned16" TextId="PO3"/>
+									<DataItem DataType="Unsigned16" TextId="PO4"/>
+									<DataItem DataType="Unsigned16" TextId="PO5"/>
+									<DataItem DataType="Unsigned16" TextId="PO6"/>
+									<DataItem DataType="Unsigned16" TextId="PO7"/>
+									<DataItem DataType="Unsigned16" TextId="PO8"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="8PD"/>
+								<InfoText TextId="8PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="12" ModuleIdentNumber="0x0000006E">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="10PD"/>
+						<InfoText TextId="10PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="11" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+									<DataItem DataType="Unsigned16" TextId="PI2"/>
+									<DataItem DataType="Unsigned16" TextId="PI3"/>
+									<DataItem DataType="Unsigned16" TextId="PI4"/>
+									<DataItem DataType="Unsigned16" TextId="PI5"/>
+									<DataItem DataType="Unsigned16" TextId="PI6"/>
+									<DataItem DataType="Unsigned16" TextId="PI7"/>
+									<DataItem DataType="Unsigned16" TextId="PI8"/>
+									<DataItem DataType="Unsigned16" TextId="PI9"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+									<DataItem DataType="Unsigned16" TextId="PO2"/>
+									<DataItem DataType="Unsigned16" TextId="PO3"/>
+									<DataItem DataType="Unsigned16" TextId="PO4"/>
+									<DataItem DataType="Unsigned16" TextId="PO5"/>
+									<DataItem DataType="Unsigned16" TextId="PO6"/>
+									<DataItem DataType="Unsigned16" TextId="PO7"/>
+									<DataItem DataType="Unsigned16" TextId="PO8"/>
+									<DataItem DataType="Unsigned16" TextId="PO9"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="10PD"/>
+								<InfoText TextId="10PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="13" ModuleIdentNumber="0x00000072">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="11 PD"/>
+						<InfoText TextId="11 PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="12" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+									<DataItem DataType="Unsigned16" TextId="PI2"/>
+									<DataItem DataType="Unsigned16" TextId="PI3"/>
+									<DataItem DataType="Unsigned16" TextId="PI4"/>
+									<DataItem DataType="Unsigned16" TextId="PI5"/>
+									<DataItem DataType="Unsigned16" TextId="PI6"/>
+									<DataItem DataType="Unsigned16" TextId="PI7"/>
+									<DataItem DataType="Unsigned16" TextId="PI8"/>
+									<DataItem DataType="Unsigned16" TextId="PI9"/>
+									<DataItem DataType="Unsigned16" TextId="PI10"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+									<DataItem DataType="Unsigned16" TextId="PO2"/>
+									<DataItem DataType="Unsigned16" TextId="PO3"/>
+									<DataItem DataType="Unsigned16" TextId="PO4"/>
+									<DataItem DataType="Unsigned16" TextId="PO5"/>
+									<DataItem DataType="Unsigned16" TextId="PO6"/>
+									<DataItem DataType="Unsigned16" TextId="PO7"/>
+									<DataItem DataType="Unsigned16" TextId="PO8"/>
+									<DataItem DataType="Unsigned16" TextId="PO9"/>
+									<DataItem DataType="Unsigned16" TextId="PO10"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="11 PD"/>
+								<InfoText TextId="11 PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="14" ModuleIdentNumber="0x00000073">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="12 PD"/>
+						<InfoText TextId="12 PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="13" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+									<DataItem DataType="Unsigned16" TextId="PI2"/>
+									<DataItem DataType="Unsigned16" TextId="PI3"/>
+									<DataItem DataType="Unsigned16" TextId="PI4"/>
+									<DataItem DataType="Unsigned16" TextId="PI5"/>
+									<DataItem DataType="Unsigned16" TextId="PI6"/>
+									<DataItem DataType="Unsigned16" TextId="PI7"/>
+									<DataItem DataType="Unsigned16" TextId="PI8"/>
+									<DataItem DataType="Unsigned16" TextId="PI9"/>
+									<DataItem DataType="Unsigned16" TextId="PI10"/>
+									<DataItem DataType="Unsigned16" TextId="PI11"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+									<DataItem DataType="Unsigned16" TextId="PO2"/>
+									<DataItem DataType="Unsigned16" TextId="PO3"/>
+									<DataItem DataType="Unsigned16" TextId="PO4"/>
+									<DataItem DataType="Unsigned16" TextId="PO5"/>
+									<DataItem DataType="Unsigned16" TextId="PO6"/>
+									<DataItem DataType="Unsigned16" TextId="PO7"/>
+									<DataItem DataType="Unsigned16" TextId="PO8"/>
+									<DataItem DataType="Unsigned16" TextId="PO9"/>
+									<DataItem DataType="Unsigned16" TextId="PO10"/>
+									<DataItem DataType="Unsigned16" TextId="PO11"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="12 PD"/>
+								<InfoText TextId="12 PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="15" ModuleIdentNumber="0x00000074">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="13 PD"/>
+						<InfoText TextId="13 PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="14" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+									<DataItem DataType="Unsigned16" TextId="PI2"/>
+									<DataItem DataType="Unsigned16" TextId="PI3"/>
+									<DataItem DataType="Unsigned16" TextId="PI4"/>
+									<DataItem DataType="Unsigned16" TextId="PI5"/>
+									<DataItem DataType="Unsigned16" TextId="PI6"/>
+									<DataItem DataType="Unsigned16" TextId="PI7"/>
+									<DataItem DataType="Unsigned16" TextId="PI8"/>
+									<DataItem DataType="Unsigned16" TextId="PI9"/>
+									<DataItem DataType="Unsigned16" TextId="PI10"/>
+									<DataItem DataType="Unsigned16" TextId="PI11"/>
+									<DataItem DataType="Unsigned16" TextId="PI12"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+									<DataItem DataType="Unsigned16" TextId="PO2"/>
+									<DataItem DataType="Unsigned16" TextId="PO3"/>
+									<DataItem DataType="Unsigned16" TextId="PO4"/>
+									<DataItem DataType="Unsigned16" TextId="PO5"/>
+									<DataItem DataType="Unsigned16" TextId="PO6"/>
+									<DataItem DataType="Unsigned16" TextId="PO7"/>
+									<DataItem DataType="Unsigned16" TextId="PO8"/>
+									<DataItem DataType="Unsigned16" TextId="PO9"/>
+									<DataItem DataType="Unsigned16" TextId="PO10"/>
+									<DataItem DataType="Unsigned16" TextId="PO11"/>
+									<DataItem DataType="Unsigned16" TextId="PO12"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="13 PD"/>
+								<InfoText TextId="13 PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="16" ModuleIdentNumber="0x00000075">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="14 PD"/>
+						<InfoText TextId="14 PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="15" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+									<DataItem DataType="Unsigned16" TextId="PI2"/>
+									<DataItem DataType="Unsigned16" TextId="PI3"/>
+									<DataItem DataType="Unsigned16" TextId="PI4"/>
+									<DataItem DataType="Unsigned16" TextId="PI5"/>
+									<DataItem DataType="Unsigned16" TextId="PI6"/>
+									<DataItem DataType="Unsigned16" TextId="PI7"/>
+									<DataItem DataType="Unsigned16" TextId="PI8"/>
+									<DataItem DataType="Unsigned16" TextId="PI9"/>
+									<DataItem DataType="Unsigned16" TextId="PI10"/>
+									<DataItem DataType="Unsigned16" TextId="PI11"/>
+									<DataItem DataType="Unsigned16" TextId="PI12"/>
+									<DataItem DataType="Unsigned16" TextId="PI13"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+									<DataItem DataType="Unsigned16" TextId="PO2"/>
+									<DataItem DataType="Unsigned16" TextId="PO3"/>
+									<DataItem DataType="Unsigned16" TextId="PO4"/>
+									<DataItem DataType="Unsigned16" TextId="PO5"/>
+									<DataItem DataType="Unsigned16" TextId="PO6"/>
+									<DataItem DataType="Unsigned16" TextId="PO7"/>
+									<DataItem DataType="Unsigned16" TextId="PO8"/>
+									<DataItem DataType="Unsigned16" TextId="PO9"/>
+									<DataItem DataType="Unsigned16" TextId="PO10"/>
+									<DataItem DataType="Unsigned16" TextId="PO11"/>
+									<DataItem DataType="Unsigned16" TextId="PO12"/>
+									<DataItem DataType="Unsigned16" TextId="PO13"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="14 PD"/>
+								<InfoText TextId="14 PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="17" ModuleIdentNumber="0x00000076">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="15 PD"/>
+						<InfoText TextId="15 PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="16" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+									<DataItem DataType="Unsigned16" TextId="PI2"/>
+									<DataItem DataType="Unsigned16" TextId="PI3"/>
+									<DataItem DataType="Unsigned16" TextId="PI4"/>
+									<DataItem DataType="Unsigned16" TextId="PI5"/>
+									<DataItem DataType="Unsigned16" TextId="PI6"/>
+									<DataItem DataType="Unsigned16" TextId="PI7"/>
+									<DataItem DataType="Unsigned16" TextId="PI8"/>
+									<DataItem DataType="Unsigned16" TextId="PI9"/>
+									<DataItem DataType="Unsigned16" TextId="PI10"/>
+									<DataItem DataType="Unsigned16" TextId="PI11"/>
+									<DataItem DataType="Unsigned16" TextId="PI12"/>
+									<DataItem DataType="Unsigned16" TextId="PI13"/>
+									<DataItem DataType="Unsigned16" TextId="PI14"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+									<DataItem DataType="Unsigned16" TextId="PO2"/>
+									<DataItem DataType="Unsigned16" TextId="PO3"/>
+									<DataItem DataType="Unsigned16" TextId="PO4"/>
+									<DataItem DataType="Unsigned16" TextId="PO5"/>
+									<DataItem DataType="Unsigned16" TextId="PO6"/>
+									<DataItem DataType="Unsigned16" TextId="PO7"/>
+									<DataItem DataType="Unsigned16" TextId="PO8"/>
+									<DataItem DataType="Unsigned16" TextId="PO9"/>
+									<DataItem DataType="Unsigned16" TextId="PO10"/>
+									<DataItem DataType="Unsigned16" TextId="PO11"/>
+									<DataItem DataType="Unsigned16" TextId="PO12"/>
+									<DataItem DataType="Unsigned16" TextId="PO13"/>
+									<DataItem DataType="Unsigned16" TextId="PO14"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="15 PD"/>
+								<InfoText TextId="15 PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="18" ModuleIdentNumber="0x00000077">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="16 PD"/>
+						<InfoText TextId="16 PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="17" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+									<DataItem DataType="Unsigned16" TextId="PI2"/>
+									<DataItem DataType="Unsigned16" TextId="PI3"/>
+									<DataItem DataType="Unsigned16" TextId="PI4"/>
+									<DataItem DataType="Unsigned16" TextId="PI5"/>
+									<DataItem DataType="Unsigned16" TextId="PI6"/>
+									<DataItem DataType="Unsigned16" TextId="PI7"/>
+									<DataItem DataType="Unsigned16" TextId="PI8"/>
+									<DataItem DataType="Unsigned16" TextId="PI9"/>
+									<DataItem DataType="Unsigned16" TextId="PI10"/>
+									<DataItem DataType="Unsigned16" TextId="PI11"/>
+									<DataItem DataType="Unsigned16" TextId="PI12"/>
+									<DataItem DataType="Unsigned16" TextId="PI13"/>
+									<DataItem DataType="Unsigned16" TextId="PI14"/>
+									<DataItem DataType="Unsigned16" TextId="PI15"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+									<DataItem DataType="Unsigned16" TextId="PO2"/>
+									<DataItem DataType="Unsigned16" TextId="PO3"/>
+									<DataItem DataType="Unsigned16" TextId="PO4"/>
+									<DataItem DataType="Unsigned16" TextId="PO5"/>
+									<DataItem DataType="Unsigned16" TextId="PO6"/>
+									<DataItem DataType="Unsigned16" TextId="PO7"/>
+									<DataItem DataType="Unsigned16" TextId="PO8"/>
+									<DataItem DataType="Unsigned16" TextId="PO9"/>
+									<DataItem DataType="Unsigned16" TextId="PO10"/>
+									<DataItem DataType="Unsigned16" TextId="PO11"/>
+									<DataItem DataType="Unsigned16" TextId="PO12"/>
+									<DataItem DataType="Unsigned16" TextId="PO13"/>
+									<DataItem DataType="Unsigned16" TextId="PO14"/>
+									<DataItem DataType="Unsigned16" TextId="PO15"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="16 PD"/>
+								<InfoText TextId="16 PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="19" ModuleIdentNumber="0x00000079">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="18 PD"/>
+						<InfoText TextId="18 PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="18" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+									<DataItem DataType="Unsigned16" TextId="PI2"/>
+									<DataItem DataType="Unsigned16" TextId="PI3"/>
+									<DataItem DataType="Unsigned16" TextId="PI4"/>
+									<DataItem DataType="Unsigned16" TextId="PI5"/>
+									<DataItem DataType="Unsigned16" TextId="PI6"/>
+									<DataItem DataType="Unsigned16" TextId="PI7"/>
+									<DataItem DataType="Unsigned16" TextId="PI8"/>
+									<DataItem DataType="Unsigned16" TextId="PI9"/>
+									<DataItem DataType="Unsigned16" TextId="PI10"/>
+									<DataItem DataType="Unsigned16" TextId="PI11"/>
+									<DataItem DataType="Unsigned16" TextId="PI12"/>
+									<DataItem DataType="Unsigned16" TextId="PI13"/>
+									<DataItem DataType="Unsigned16" TextId="PI14"/>
+									<DataItem DataType="Unsigned16" TextId="PI15"/>
+									<DataItem DataType="Unsigned16" TextId="PI16"/>
+									<DataItem DataType="Unsigned16" TextId="PI17"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+									<DataItem DataType="Unsigned16" TextId="PO2"/>
+									<DataItem DataType="Unsigned16" TextId="PO3"/>
+									<DataItem DataType="Unsigned16" TextId="PO4"/>
+									<DataItem DataType="Unsigned16" TextId="PO5"/>
+									<DataItem DataType="Unsigned16" TextId="PO6"/>
+									<DataItem DataType="Unsigned16" TextId="PO7"/>
+									<DataItem DataType="Unsigned16" TextId="PO8"/>
+									<DataItem DataType="Unsigned16" TextId="PO9"/>
+									<DataItem DataType="Unsigned16" TextId="PO10"/>
+									<DataItem DataType="Unsigned16" TextId="PO11"/>
+									<DataItem DataType="Unsigned16" TextId="PO12"/>
+									<DataItem DataType="Unsigned16" TextId="PO13"/>
+									<DataItem DataType="Unsigned16" TextId="PO14"/>
+									<DataItem DataType="Unsigned16" TextId="PO15"/>
+									<DataItem DataType="Unsigned16" TextId="PO16"/>
+									<DataItem DataType="Unsigned16" TextId="PO17"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="18 PD"/>
+								<InfoText TextId="18 PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="20" ModuleIdentNumber="0x00000080">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="21 PD"/>
+						<InfoText TextId="21 PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="19" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+									<DataItem DataType="Unsigned16" TextId="PI2"/>
+									<DataItem DataType="Unsigned16" TextId="PI3"/>
+									<DataItem DataType="Unsigned16" TextId="PI4"/>
+									<DataItem DataType="Unsigned16" TextId="PI5"/>
+									<DataItem DataType="Unsigned16" TextId="PI6"/>
+									<DataItem DataType="Unsigned16" TextId="PI7"/>
+									<DataItem DataType="Unsigned16" TextId="PI8"/>
+									<DataItem DataType="Unsigned16" TextId="PI9"/>
+									<DataItem DataType="Unsigned16" TextId="PI10"/>
+									<DataItem DataType="Unsigned16" TextId="PI11"/>
+									<DataItem DataType="Unsigned16" TextId="PI12"/>
+									<DataItem DataType="Unsigned16" TextId="PI13"/>
+									<DataItem DataType="Unsigned16" TextId="PI14"/>
+									<DataItem DataType="Unsigned16" TextId="PI15"/>
+									<DataItem DataType="Unsigned16" TextId="PI16"/>
+									<DataItem DataType="Unsigned16" TextId="PI17"/>
+									<DataItem DataType="Unsigned16" TextId="PI18"/>
+									<DataItem DataType="Unsigned16" TextId="PI19"/>
+									<DataItem DataType="Unsigned16" TextId="PI20"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+									<DataItem DataType="Unsigned16" TextId="PO2"/>
+									<DataItem DataType="Unsigned16" TextId="PO3"/>
+									<DataItem DataType="Unsigned16" TextId="PO4"/>
+									<DataItem DataType="Unsigned16" TextId="PO5"/>
+									<DataItem DataType="Unsigned16" TextId="PO6"/>
+									<DataItem DataType="Unsigned16" TextId="PO7"/>
+									<DataItem DataType="Unsigned16" TextId="PO8"/>
+									<DataItem DataType="Unsigned16" TextId="PO9"/>
+									<DataItem DataType="Unsigned16" TextId="PO10"/>
+									<DataItem DataType="Unsigned16" TextId="PO11"/>
+									<DataItem DataType="Unsigned16" TextId="PO12"/>
+									<DataItem DataType="Unsigned16" TextId="PO13"/>
+									<DataItem DataType="Unsigned16" TextId="PO14"/>
+									<DataItem DataType="Unsigned16" TextId="PO15"/>
+									<DataItem DataType="Unsigned16" TextId="PO16"/>
+									<DataItem DataType="Unsigned16" TextId="PO17"/>
+									<DataItem DataType="Unsigned16" TextId="PO18"/>
+									<DataItem DataType="Unsigned16" TextId="PO19"/>
+									<DataItem DataType="Unsigned16" TextId="PO20"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="21 PD"/>
+								<InfoText TextId="21 PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="21" ModuleIdentNumber="0x00000081">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="24 PD"/>
+						<InfoText TextId="24 PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="20" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+									<DataItem DataType="Unsigned16" TextId="PI2"/>
+									<DataItem DataType="Unsigned16" TextId="PI3"/>
+									<DataItem DataType="Unsigned16" TextId="PI4"/>
+									<DataItem DataType="Unsigned16" TextId="PI5"/>
+									<DataItem DataType="Unsigned16" TextId="PI6"/>
+									<DataItem DataType="Unsigned16" TextId="PI7"/>
+									<DataItem DataType="Unsigned16" TextId="PI8"/>
+									<DataItem DataType="Unsigned16" TextId="PI9"/>
+									<DataItem DataType="Unsigned16" TextId="PI10"/>
+									<DataItem DataType="Unsigned16" TextId="PI11"/>
+									<DataItem DataType="Unsigned16" TextId="PI12"/>
+									<DataItem DataType="Unsigned16" TextId="PI13"/>
+									<DataItem DataType="Unsigned16" TextId="PI14"/>
+									<DataItem DataType="Unsigned16" TextId="PI15"/>
+									<DataItem DataType="Unsigned16" TextId="PI16"/>
+									<DataItem DataType="Unsigned16" TextId="PI17"/>
+									<DataItem DataType="Unsigned16" TextId="PI18"/>
+									<DataItem DataType="Unsigned16" TextId="PI19"/>
+									<DataItem DataType="Unsigned16" TextId="PI20"/>
+									<DataItem DataType="Unsigned16" TextId="PI21"/>
+									<DataItem DataType="Unsigned16" TextId="PI22"/>
+									<DataItem DataType="Unsigned16" TextId="PI23"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+									<DataItem DataType="Unsigned16" TextId="PO2"/>
+									<DataItem DataType="Unsigned16" TextId="PO3"/>
+									<DataItem DataType="Unsigned16" TextId="PO4"/>
+									<DataItem DataType="Unsigned16" TextId="PO5"/>
+									<DataItem DataType="Unsigned16" TextId="PO6"/>
+									<DataItem DataType="Unsigned16" TextId="PO7"/>
+									<DataItem DataType="Unsigned16" TextId="PO8"/>
+									<DataItem DataType="Unsigned16" TextId="PO9"/>
+									<DataItem DataType="Unsigned16" TextId="PO10"/>
+									<DataItem DataType="Unsigned16" TextId="PO11"/>
+									<DataItem DataType="Unsigned16" TextId="PO12"/>
+									<DataItem DataType="Unsigned16" TextId="PO13"/>
+									<DataItem DataType="Unsigned16" TextId="PO14"/>
+									<DataItem DataType="Unsigned16" TextId="PO15"/>
+									<DataItem DataType="Unsigned16" TextId="PO16"/>
+									<DataItem DataType="Unsigned16" TextId="PO17"/>
+									<DataItem DataType="Unsigned16" TextId="PO18"/>
+									<DataItem DataType="Unsigned16" TextId="PO19"/>
+									<DataItem DataType="Unsigned16" TextId="PO20"/>
+									<DataItem DataType="Unsigned16" TextId="PO21"/>
+									<DataItem DataType="Unsigned16" TextId="PO22"/>
+									<DataItem DataType="Unsigned16" TextId="PO23"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="24 PD"/>
+								<InfoText TextId="24 PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="22" ModuleIdentNumber="0x00000078">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="32 PD"/>
+						<InfoText TextId="32 PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="21" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+									<DataItem DataType="Unsigned16" TextId="PI2"/>
+									<DataItem DataType="Unsigned16" TextId="PI3"/>
+									<DataItem DataType="Unsigned16" TextId="PI4"/>
+									<DataItem DataType="Unsigned16" TextId="PI5"/>
+									<DataItem DataType="Unsigned16" TextId="PI6"/>
+									<DataItem DataType="Unsigned16" TextId="PI7"/>
+									<DataItem DataType="Unsigned16" TextId="PI8"/>
+									<DataItem DataType="Unsigned16" TextId="PI9"/>
+									<DataItem DataType="Unsigned16" TextId="PI10"/>
+									<DataItem DataType="Unsigned16" TextId="PI11"/>
+									<DataItem DataType="Unsigned16" TextId="PI12"/>
+									<DataItem DataType="Unsigned16" TextId="PI13"/>
+									<DataItem DataType="Unsigned16" TextId="PI14"/>
+									<DataItem DataType="Unsigned16" TextId="PI15"/>
+									<DataItem DataType="Unsigned16" TextId="PI16"/>
+									<DataItem DataType="Unsigned16" TextId="PI17"/>
+									<DataItem DataType="Unsigned16" TextId="PI18"/>
+									<DataItem DataType="Unsigned16" TextId="PI19"/>
+									<DataItem DataType="Unsigned16" TextId="PI20"/>
+									<DataItem DataType="Unsigned16" TextId="PI21"/>
+									<DataItem DataType="Unsigned16" TextId="PI22"/>
+									<DataItem DataType="Unsigned16" TextId="PI23"/>
+									<DataItem DataType="Unsigned16" TextId="PI24"/>
+									<DataItem DataType="Unsigned16" TextId="PI25"/>
+									<DataItem DataType="Unsigned16" TextId="PI26"/>
+									<DataItem DataType="Unsigned16" TextId="PI27"/>
+									<DataItem DataType="Unsigned16" TextId="PI28"/>
+									<DataItem DataType="Unsigned16" TextId="PI29"/>
+									<DataItem DataType="Unsigned16" TextId="PI30"/>
+									<DataItem DataType="Unsigned16" TextId="PI31"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+									<DataItem DataType="Unsigned16" TextId="PO2"/>
+									<DataItem DataType="Unsigned16" TextId="PO3"/>
+									<DataItem DataType="Unsigned16" TextId="PO4"/>
+									<DataItem DataType="Unsigned16" TextId="PO5"/>
+									<DataItem DataType="Unsigned16" TextId="PO6"/>
+									<DataItem DataType="Unsigned16" TextId="PO7"/>
+									<DataItem DataType="Unsigned16" TextId="PO8"/>
+									<DataItem DataType="Unsigned16" TextId="PO9"/>
+									<DataItem DataType="Unsigned16" TextId="PO10"/>
+									<DataItem DataType="Unsigned16" TextId="PO11"/>
+									<DataItem DataType="Unsigned16" TextId="PO12"/>
+									<DataItem DataType="Unsigned16" TextId="PO13"/>
+									<DataItem DataType="Unsigned16" TextId="PO14"/>
+									<DataItem DataType="Unsigned16" TextId="PO15"/>
+									<DataItem DataType="Unsigned16" TextId="PO16"/>
+									<DataItem DataType="Unsigned16" TextId="PO17"/>
+									<DataItem DataType="Unsigned16" TextId="PO18"/>
+									<DataItem DataType="Unsigned16" TextId="PO19"/>
+									<DataItem DataType="Unsigned16" TextId="PO20"/>
+									<DataItem DataType="Unsigned16" TextId="PO21"/>
+									<DataItem DataType="Unsigned16" TextId="PO22"/>
+									<DataItem DataType="Unsigned16" TextId="PO23"/>
+									<DataItem DataType="Unsigned16" TextId="PO24"/>
+									<DataItem DataType="Unsigned16" TextId="PO25"/>
+									<DataItem DataType="Unsigned16" TextId="PO26"/>
+									<DataItem DataType="Unsigned16" TextId="PO27"/>
+									<DataItem DataType="Unsigned16" TextId="PO28"/>
+									<DataItem DataType="Unsigned16" TextId="PO29"/>
+									<DataItem DataType="Unsigned16" TextId="PO30"/>
+									<DataItem DataType="Unsigned16" TextId="PO31"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="32 PD"/>
+								<InfoText TextId="32 PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="23" ModuleIdentNumber="0x0000007A">
+					<ModuleInfo CategoryRef="PD Channel">
+						<Name TextId="64 PD"/>
+						<InfoText TextId="64 PD"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="23" SubmoduleIdentNumber="0x00000000">
+							<IOData IOPS_Length="1" IOCS_Length="1">
+								<Input Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PI0"/>
+									<DataItem DataType="Unsigned16" TextId="PI1"/>
+									<DataItem DataType="Unsigned16" TextId="PI2"/>
+									<DataItem DataType="Unsigned16" TextId="PI3"/>
+									<DataItem DataType="Unsigned16" TextId="PI4"/>
+									<DataItem DataType="Unsigned16" TextId="PI5"/>
+									<DataItem DataType="Unsigned16" TextId="PI6"/>
+									<DataItem DataType="Unsigned16" TextId="PI7"/>
+									<DataItem DataType="Unsigned16" TextId="PI8"/>
+									<DataItem DataType="Unsigned16" TextId="PI9"/>
+									<DataItem DataType="Unsigned16" TextId="PI10"/>
+									<DataItem DataType="Unsigned16" TextId="PI11"/>
+									<DataItem DataType="Unsigned16" TextId="PI12"/>
+									<DataItem DataType="Unsigned16" TextId="PI13"/>
+									<DataItem DataType="Unsigned16" TextId="PI14"/>
+									<DataItem DataType="Unsigned16" TextId="PI15"/>
+									<DataItem DataType="Unsigned16" TextId="PI16"/>
+									<DataItem DataType="Unsigned16" TextId="PI17"/>
+									<DataItem DataType="Unsigned16" TextId="PI18"/>
+									<DataItem DataType="Unsigned16" TextId="PI19"/>
+									<DataItem DataType="Unsigned16" TextId="PI20"/>
+									<DataItem DataType="Unsigned16" TextId="PI21"/>
+									<DataItem DataType="Unsigned16" TextId="PI22"/>
+									<DataItem DataType="Unsigned16" TextId="PI23"/>
+									<DataItem DataType="Unsigned16" TextId="PI24"/>
+									<DataItem DataType="Unsigned16" TextId="PI25"/>
+									<DataItem DataType="Unsigned16" TextId="PI26"/>
+									<DataItem DataType="Unsigned16" TextId="PI27"/>
+									<DataItem DataType="Unsigned16" TextId="PI28"/>
+									<DataItem DataType="Unsigned16" TextId="PI29"/>
+									<DataItem DataType="Unsigned16" TextId="PI30"/>
+									<DataItem DataType="Unsigned16" TextId="PI31"/>
+									<DataItem DataType="Unsigned16" TextId="PI32"/>
+									<DataItem DataType="Unsigned16" TextId="PI33"/>
+									<DataItem DataType="Unsigned16" TextId="PI34"/>
+									<DataItem DataType="Unsigned16" TextId="PI35"/>
+									<DataItem DataType="Unsigned16" TextId="PI36"/>
+									<DataItem DataType="Unsigned16" TextId="PI37"/>
+									<DataItem DataType="Unsigned16" TextId="PI38"/>
+									<DataItem DataType="Unsigned16" TextId="PI39"/>
+									<DataItem DataType="Unsigned16" TextId="PI40"/>
+									<DataItem DataType="Unsigned16" TextId="PI41"/>
+									<DataItem DataType="Unsigned16" TextId="PI42"/>
+									<DataItem DataType="Unsigned16" TextId="PI43"/>
+									<DataItem DataType="Unsigned16" TextId="PI44"/>
+									<DataItem DataType="Unsigned16" TextId="PI45"/>
+									<DataItem DataType="Unsigned16" TextId="PI46"/>
+									<DataItem DataType="Unsigned16" TextId="PI47"/>
+									<DataItem DataType="Unsigned16" TextId="PI48"/>
+									<DataItem DataType="Unsigned16" TextId="PI49"/>
+									<DataItem DataType="Unsigned16" TextId="PI50"/>
+									<DataItem DataType="Unsigned16" TextId="PI51"/>
+									<DataItem DataType="Unsigned16" TextId="PI52"/>
+									<DataItem DataType="Unsigned16" TextId="PI53"/>
+									<DataItem DataType="Unsigned16" TextId="PI54"/>
+									<DataItem DataType="Unsigned16" TextId="PI55"/>
+									<DataItem DataType="Unsigned16" TextId="PI56"/>
+									<DataItem DataType="Unsigned16" TextId="PI57"/>
+									<DataItem DataType="Unsigned16" TextId="PI58"/>
+									<DataItem DataType="Unsigned16" TextId="PI59"/>
+									<DataItem DataType="Unsigned16" TextId="PI60"/>
+									<DataItem DataType="Unsigned16" TextId="PI61"/>
+									<DataItem DataType="Unsigned16" TextId="PI62"/>
+									<DataItem DataType="Unsigned16" TextId="PI63"/>
+								</Input>
+								<Output Consistency="All items consistency">
+									<DataItem DataType="Unsigned16" TextId="PO0"/>
+									<DataItem DataType="Unsigned16" TextId="PO1"/>
+									<DataItem DataType="Unsigned16" TextId="PO2"/>
+									<DataItem DataType="Unsigned16" TextId="PO3"/>
+									<DataItem DataType="Unsigned16" TextId="PO4"/>
+									<DataItem DataType="Unsigned16" TextId="PO5"/>
+									<DataItem DataType="Unsigned16" TextId="PO6"/>
+									<DataItem DataType="Unsigned16" TextId="PO7"/>
+									<DataItem DataType="Unsigned16" TextId="PO8"/>
+									<DataItem DataType="Unsigned16" TextId="PO9"/>
+									<DataItem DataType="Unsigned16" TextId="PO10"/>
+									<DataItem DataType="Unsigned16" TextId="PO11"/>
+									<DataItem DataType="Unsigned16" TextId="PO12"/>
+									<DataItem DataType="Unsigned16" TextId="PO13"/>
+									<DataItem DataType="Unsigned16" TextId="PO14"/>
+									<DataItem DataType="Unsigned16" TextId="PO15"/>
+									<DataItem DataType="Unsigned16" TextId="PO16"/>
+									<DataItem DataType="Unsigned16" TextId="PO17"/>
+									<DataItem DataType="Unsigned16" TextId="PO18"/>
+									<DataItem DataType="Unsigned16" TextId="PO19"/>
+									<DataItem DataType="Unsigned16" TextId="PO20"/>
+									<DataItem DataType="Unsigned16" TextId="PO21"/>
+									<DataItem DataType="Unsigned16" TextId="PO22"/>
+									<DataItem DataType="Unsigned16" TextId="PO23"/>
+									<DataItem DataType="Unsigned16" TextId="PO24"/>
+									<DataItem DataType="Unsigned16" TextId="PO25"/>
+									<DataItem DataType="Unsigned16" TextId="PO26"/>
+									<DataItem DataType="Unsigned16" TextId="PO27"/>
+									<DataItem DataType="Unsigned16" TextId="PO28"/>
+									<DataItem DataType="Unsigned16" TextId="PO29"/>
+									<DataItem DataType="Unsigned16" TextId="PO30"/>
+									<DataItem DataType="Unsigned16" TextId="PO31"/>
+									<DataItem DataType="Unsigned16" TextId="PO32"/>
+									<DataItem DataType="Unsigned16" TextId="PO33"/>
+									<DataItem DataType="Unsigned16" TextId="PO34"/>
+									<DataItem DataType="Unsigned16" TextId="PO35"/>
+									<DataItem DataType="Unsigned16" TextId="PO36"/>
+									<DataItem DataType="Unsigned16" TextId="PO37"/>
+									<DataItem DataType="Unsigned16" TextId="PO38"/>
+									<DataItem DataType="Unsigned16" TextId="PO39"/>
+									<DataItem DataType="Unsigned16" TextId="PO40"/>
+									<DataItem DataType="Unsigned16" TextId="PO41"/>
+									<DataItem DataType="Unsigned16" TextId="PO42"/>
+									<DataItem DataType="Unsigned16" TextId="PO43"/>
+									<DataItem DataType="Unsigned16" TextId="PO44"/>
+									<DataItem DataType="Unsigned16" TextId="PO45"/>
+									<DataItem DataType="Unsigned16" TextId="PO46"/>
+									<DataItem DataType="Unsigned16" TextId="PO47"/>
+									<DataItem DataType="Unsigned16" TextId="PO48"/>
+									<DataItem DataType="Unsigned16" TextId="PO49"/>
+									<DataItem DataType="Unsigned16" TextId="PO50"/>
+									<DataItem DataType="Unsigned16" TextId="PO51"/>
+									<DataItem DataType="Unsigned16" TextId="PO52"/>
+									<DataItem DataType="Unsigned16" TextId="PO53"/>
+									<DataItem DataType="Unsigned16" TextId="PO54"/>
+									<DataItem DataType="Unsigned16" TextId="PO55"/>
+									<DataItem DataType="Unsigned16" TextId="PO56"/>
+									<DataItem DataType="Unsigned16" TextId="PO57"/>
+									<DataItem DataType="Unsigned16" TextId="PO58"/>
+									<DataItem DataType="Unsigned16" TextId="PO59"/>
+									<DataItem DataType="Unsigned16" TextId="PO60"/>
+									<DataItem DataType="Unsigned16" TextId="PO61"/>
+									<DataItem DataType="Unsigned16" TextId="PO62"/>
+									<DataItem DataType="Unsigned16" TextId="PO63"/>
+								</Output>
+							</IOData>
+							<RecordDataList/>
+							<ModuleInfo CategoryRef="PD Channel">
+								<Name TextId="64 PD"/>
+								<InfoText TextId="64 PD"/>
+							</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+			</ModuleList>
+			<ValueList>
+				<ValueItem ID="DiagAlarmEnabling">
+					<Assignments>
+						<Assign Content="0" TextId="Off"/>
+						<Assign Content="1" TextId="On"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="DiagAlarmPort1">
+					<Assignments>
+						<Assign Content="0" TextId="Keine Überwachung"/>
+						<Assign Content="1" TextId="Link Down erzeugt kommenden Alarm"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="DiagAlarmPort2">
+					<Assignments>
+						<Assign Content="0" TextId="Keine Überwachung"/>
+						<Assign Content="1" TextId="Link Down erzeugt kommenden Alarm"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="BdDxAlarmPort1">
+					<Assignments>
+						<Assign Content="0" TextId="Keine Überwachung"/>
+						<Assign Content="1" TextId="Baudrate 10MBit oder Halbduplex - Mode erzeugt kommenden Alarm"/>
+					</Assignments>
+				</ValueItem>
+				<ValueItem ID="BdDxAlarmPort2">
+					<Assignments>
+						<Assign Content="0" TextId="Keine Überwachung"/>
+						<Assign Content="1" TextId="Baudrate 10MBit oder Halbduplex - Mode erzeugt kommenden Alarm"/>
+					</Assignments>
+				</ValueItem>
+			</ValueList>
+			<!-- Ab hier beginnen die Diagnose-Texte -->
+			<ChannelDiagList>
+				<!--Fehlercodes der F-Option mit Offset 5F00h = 24320dez-->
+				<!--Fehlercodes der F-Parametrierung ohne Offset-->
+				<!--Fehlercodes der Applikation mit Offset 5000hex = 20480dez-->
+				<ChannelDiagItem ErrorType="64">
+					<Name TextId="FS64 FDestAdd ungleich"/>
+					<Help TextId="FS64 FDestAdd ungleich Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="65">
+					<Name TextId="FS65 FDestAdd ungültig"/>
+					<Help TextId="FS65 FDestAdd ungültig Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="66">
+					<Name TextId="FS66 FSrcAdd ungültig"/>
+					<Help TextId="FS66 FSrcAdd ungültig Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="67">
+					<Name TextId="FS67 F WD Time Null"/>
+					<Help TextId="FS67 F WD Time Null Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="68">
+					<Name TextId="FS68 F SIL"/>
+					<Help TextId="FS68 F SIL Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="69">
+					<Name TextId="FS69 F CRC Length"/>
+					<Help TextId="FS69 F CRC Length Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="70">
+					<Name TextId="FS70 F-Parameter"/>
+					<Help TextId="FS70 F-Parameter Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="71">
+					<Name TextId="FS71 CRC1 Fault"/>
+					<Help TextId="FS71 CRC1 Fault Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="72">
+					<Name TextId="FS7x Res"/>
+					<Help TextId="FS7x Res Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="73">
+					<Name TextId="FS7x Res"/>
+					<Help TextId="FS7x Res Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="74">
+					<Name TextId="FS7x Res"/>
+					<Help TextId="FS7x Res Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="75">
+					<Name TextId="FS7x Res"/>
+					<Help TextId="FS7x Res Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="76">
+					<Name TextId="FS7x Res"/>
+					<Help TextId="FS7x Res Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="77">
+					<Name TextId="FS7x Res"/>
+					<Help TextId="FS7x Res Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="78">
+					<Name TextId="FS7x Res"/>
+					<Help TextId="FS7x Res Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="79">
+					<Name TextId="FS7x Res"/>
+					<Help TextId="FS7x Res Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20505">
+					<Name TextId="F25 EEPROM"/>
+					<Help TextId="F25 EEPROM Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20517">
+					<Name TextId="F37 System-Watchdog"/>
+					<Help TextId="F37 System-Watchdog Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20518">
+					<Name TextId="F38 System-Software"/>
+					<Help TextId="F38 System-Software Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20525">
+					<Name TextId="F45 Initialisierung"/>
+					<Help TextId="F45 Initialisierung Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20577">
+					<Name TextId="F97 Daten kopieren"/>
+					<Help TextId="F97 Daten kopieren Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="20578">
+					<Name TextId="F98 CRC Error Flash"/>
+					<Help TextId="F98 CRC Error Flash Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="24321">
+					<Name TextId="FS1 Interner Ablauffehler"/>
+					<Help TextId="FS1 Interner Ablauffehler Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="24322">
+					<Name TextId="FS2 Interner Systemfehler"/>
+					<Help TextId="FS2 Interner Systemfehler Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="24323">
+					<Name TextId="FS3 Fehler Kommunikation"/>
+					<Help TextId="FS3 Fehler Kommunikation Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="24324">
+					<Name TextId="FS4 Fehler Elektronikversorgung"/>
+					<Help TextId="FS4 Fehler Elektronikversorgung Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="24325">
+					<Name TextId="FS5 Fehler Lastspannungsversorgung"/>
+					<Help TextId="FS5 Fehler Lastspannungsversorgung Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="24326">
+					<Name TextId="FS6 Versionskonflikt"/>
+					<Help TextId="FS6 Versionskonflikt Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="24327">
+					<Name TextId="FS7 Profisafe Adresse"/>
+					<Help TextId="FS7 Profisafe Adresse Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="24340">
+					<Name TextId="FS20 Interner Fehler sicherer Eingang"/>
+					<Help TextId="FS20 Interner Fehler sicherer Eingang Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="24341">
+					<Name TextId="FS21 Kurzschluss sicherer Eingang"/>
+					<Help TextId="FS21 Kurzschluss sicherer Eingang Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="24370">
+					<Name TextId="FS50 Interner Fehler sicherer Ausgang"/>
+					<Help TextId="FS50 Interner Fehler sicherer Ausgang Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="24371">
+					<Name TextId="FS51 Kurzschluss sicherer Ausgang"/>
+					<Help TextId="FS51 Kurzschluss sicherer Ausgang Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="24372">
+					<Name TextId="FS52 Überlast sicherer Ausgang"/>
+					<Help TextId="FS52 Überlast sicherer Ausgang Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="24065">
+					<Name TextId="Switch Port 1 Down"/>
+					<Help TextId="Switch Port 1 Down Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="24066">
+					<Name TextId="Switch Port 2 Down"/>
+					<Help TextId="Switch Port 2 Down Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="24067">
+					<Name TextId="Switch Port 1 BdDx"/>
+					<Help TextId="Switch Port 1 BdDx Hilfetext"/>
+				</ChannelDiagItem>
+				<ChannelDiagItem ErrorType="24068">
+					<Name TextId="Switch Port 2 BdDx"/>
+					<Help TextId="Switch Port 2 BdDx Hilfetext"/>
+				</ChannelDiagItem>
+			</ChannelDiagList>
+			<GraphicsList>
+				<GraphicItem ID="1" GraphicFile="GSDML-010A-0004-MOVIPRO"/>
+			</GraphicsList>
+			<CategoryList>
+				<CategoryItem ID="Profinet IO Anschaltung" TextId="Profinet IO Anschaltung"/>
+				<CategoryItem ID="Slot not used" TextId="Slot not used"/>
+				<CategoryItem ID="Safety Module" TextId="Safety Module"/>
+				<CategoryItem ID="PD Channel" TextId="PD Channel"/>
+			</CategoryList>
+			<ExternalTextList>
+				<PrimaryLanguage>
+					<Text TextId="SEW MOVIPRO" Value="SEW MOVIPRO"/>
+					<Text TextId="MOVIPRO1" Value="MOVIPRO V1.0 OLD"/>
+					<Text TextId="MOVIPRO1 PDEV V70" Value="MOVIPRO V7.0"/>
+					<Text TextId="MOVIPRO1 PDEV MRP V77" Value="MOVIPRO V7.7"/>
+					<Text TextId="MOVIPRO1 PDEV V11" Value="MOVIPRO V1.1"/>
+					<Text TextId="MOVIPRO1 PDEV POF V15" Value="MOVIPRO V1.5 FO V70"/>
+					<Text TextId="MOVIPRO1 PDEV MRP V17" Value="MOVIPRO V1.7"/>
+					<Text TextId="MOVIPRO1 PDEV POF MRP V17" Value="MOVIPRO V1.7 FO V71"/>
+					<Text TextId="MOVIPROAM mit PROFINET IO Interface PDEV" Value="MOVIPRO A- with PROFINET IO Interface (incl. topology recognition)"/>
+					<Text TextId="MOVIPROAM mit PROFINET IO Interface PDEV MRP" Value="MOVIPRO A- with PROFINET IO Interface (incl. topology recognition and MRP media redundancy); Firmwareversion 7.7 or later"/>
+					<Text TextId="MOVIPRO1 mit PROFINET IO Interface" Value="MOVIPRO with PROFINET IO Interface, (for old S7 without topology recognition)"/>
+					<Text TextId="MOVIPRO1 mit PROFINET IO Interface PDEV" Value="MOVIPRO with PROFINET IO Interface (incl. topology recognition)"/>
+					<Text TextId="MOVIPRO1 mit PROFINET IO Interface PDEV POF" Value="MOVIPRO with PROFINET IO FO Interface (incl. topology recognition); Firmwareversion 1.5 or later"/>
+					<Text TextId="MOVIPRO1 mit PROFINET IO Interface PDEV MRP" Value="MOVIPRO with PROFINET IO Interface (incl. topology recognition and MRP media redundancy); Firmwareversion 1.7 or later"/>
+					<Text TextId="MOVIPRO1 mit PROFINET IO Interface PDEV POF MRP" Value="MOVIPRO with PROFINET IO FO Interface (incl. topology recognition and MRP media redundancy); Converter-Hardwareversion: 71; Firmwareversion 1.7 or later"/>
+					<Text TextId="PDEV_Interface" Value="X1"/>
+					<Text TextId="PDEV_Port1" Value="P1"/>
+					<Text TextId="PDEV_Port2" Value="P2"/>
+					<Text TextId="T_DAP_InterfaceModule" Value="Ethernet Interface"/>
+					<Text TextId="T_Port1" Value="Port 1 - RJ45 (X4232_1)"/>
+					<Text TextId="T_Port2" Value="Port 2 - RJ45 (X4232_2)"/>
+					<Text TextId="T_Port1_POF" Value="Port 1 - SCRJ (X4234_11)"/>
+					<Text TextId="T_Port2_POF" Value="Port 2 - SCRJ (X4234_12)"/>
+					<Text TextId="Leermodul" Value="Slot not used"/>
+					<Text TextId="Info Leermodul" Value="Slot not used"/>
+					<Text TextId="F-Modul I/O (2 Byte)" Value="F-Module I/O (2 Byte)"/>
+					<Text TextId="F-Modul I/O (12 Byte)" Value="F-Module I/O (12 Byte)"/>
+					<Text TextId="Safety Module I/O (2 Byte)" Value="Safety Module I/O (2 Byte)"/>
+					<Text TextId="Safety Module I/O (12 Byte)" Value="Safety Module I/O (12 Byte)"/>
+					<Text TextId="FDI" Value="FDI"/>
+					<Text TextId="FDI1" Value="FDI 1"/>
+					<Text TextId="FDI2" Value="FDI 2"/>
+					<Text TextId="FPI1" Value="F process data 1"/>
+					<Text TextId="FPI2" Value="F process data 2"/>
+					<Text TextId="Safety" Value="Safety"/>
+					<Text TextId="FDO" Value="FDO"/>
+					<Text TextId="FDO1" Value="FDO 1"/>
+					<Text TextId="FDO2" Value="FDO 2"/>
+					<Text TextId="FPO1" Value="F process data 1"/>
+					<Text TextId="FPO2" Value="F process data 2"/>
+					<Text TextId="1PD" Value="01 process data word"/>
+					<Text TextId="2PD" Value="02 process data words"/>
+					<Text TextId="3PD" Value="03 process data words"/>
+					<Text TextId="4PD" Value="04 process data words"/>
+					<Text TextId="5PD" Value="05 process data words"/>
+					<Text TextId="6PD" Value="06 process data words"/>
+					<Text TextId="7PD" Value="07 process data words"/>
+					<Text TextId="8PD" Value="08 process data words"/>
+					<Text TextId="9PD" Value="09 process data words"/>
+					<Text TextId="10PD" Value="10 process data words"/>
+					<Text TextId="11 PD" Value="11 process data words"/>
+					<Text TextId="12 PD" Value="12 process data words"/>
+					<Text TextId="13 PD" Value="13 process data words"/>
+					<Text TextId="14 PD" Value="14 process data words"/>
+					<Text TextId="15 PD" Value="15 process data words"/>
+					<Text TextId="16 PD" Value="16 process data words"/>
+					<Text TextId="18 PD" Value="18 process data words"/>
+					<Text TextId="21 PD" Value="21 process data words"/>
+					<Text TextId="24 PD" Value="24 process data words"/>
+					<Text TextId="32 PD" Value="32 process data words"/>
+					<Text TextId="64 PD" Value="64 process data words"/>
+					<Text TextId="PI0" Value="Process input data word 0"/>
+					<Text TextId="PI1" Value="Process input data word 1"/>
+					<Text TextId="PI2" Value="Process input data word 2"/>
+					<Text TextId="PI3" Value="Process input data word 3"/>
+					<Text TextId="PI4" Value="Process input data word 4"/>
+					<Text TextId="PI5" Value="Process input data word 5"/>
+					<Text TextId="PI6" Value="Process input data word 6"/>
+					<Text TextId="PI7" Value="Process input data word 7"/>
+					<Text TextId="PI8" Value="Process input data word 8"/>
+					<Text TextId="PI9" Value="Process input data word 9"/>
+					<Text TextId="PI10" Value="Process input data word 10"/>
+					<Text TextId="PI11" Value="Process input data word 11"/>
+					<Text TextId="PI12" Value="Process input data word 12"/>
+					<Text TextId="PI13" Value="Process input data word 13"/>
+					<Text TextId="PI14" Value="Process input data word 14"/>
+					<Text TextId="PI15" Value="Process input data word 15"/>
+					<Text TextId="PI16" Value="Process input data word 16"/>
+					<Text TextId="PI17" Value="Process input data word 17"/>
+					<Text TextId="PI18" Value="Process input data word 18"/>
+					<Text TextId="PI19" Value="Process input data word 19"/>
+					<Text TextId="PI20" Value="Process input data word 20"/>
+					<Text TextId="PI21" Value="Process input data word 21"/>
+					<Text TextId="PI22" Value="Process input data word 22"/>
+					<Text TextId="PI23" Value="Process input data word 23"/>
+					<Text TextId="PI24" Value="Process input data word 24"/>
+					<Text TextId="PI25" Value="Process input data word 25"/>
+					<Text TextId="PI26" Value="Process input data word 26"/>
+					<Text TextId="PI27" Value="Process input data word 27"/>
+					<Text TextId="PI28" Value="Process input data word 28"/>
+					<Text TextId="PI29" Value="Process input data word 29"/>
+					<Text TextId="PI30" Value="Process input data word 30"/>
+					<Text TextId="PI31" Value="Process input data word 31"/>
+					<Text TextId="PI32" Value="Process input data word 32"/>
+					<Text TextId="PI33" Value="Process input data word 33"/>
+					<Text TextId="PI34" Value="Process input data word 34"/>
+					<Text TextId="PI35" Value="Process input data word 35"/>
+					<Text TextId="PI36" Value="Process input data word 36"/>
+					<Text TextId="PI37" Value="Process input data word 37"/>
+					<Text TextId="PI38" Value="Process input data word 38"/>
+					<Text TextId="PI39" Value="Process input data word 39"/>
+					<Text TextId="PI40" Value="Process input data word 40"/>
+					<Text TextId="PI41" Value="Process input data word 41"/>
+					<Text TextId="PI42" Value="Process input data word 42"/>
+					<Text TextId="PI43" Value="Process input data word 43"/>
+					<Text TextId="PI44" Value="Process input data word 44"/>
+					<Text TextId="PI45" Value="Process input data word 45"/>
+					<Text TextId="PI46" Value="Process input data word 46"/>
+					<Text TextId="PI47" Value="Process input data word 47"/>
+					<Text TextId="PI48" Value="Process input data word 48"/>
+					<Text TextId="PI49" Value="Process input data word 49"/>
+					<Text TextId="PI50" Value="Process input data word 50"/>
+					<Text TextId="PI51" Value="Process input data word 51"/>
+					<Text TextId="PI52" Value="Process input data word 52"/>
+					<Text TextId="PI53" Value="Process input data word 53"/>
+					<Text TextId="PI54" Value="Process input data word 54"/>
+					<Text TextId="PI55" Value="Process input data word 55"/>
+					<Text TextId="PI56" Value="Process input data word 56"/>
+					<Text TextId="PI57" Value="Process input data word 57"/>
+					<Text TextId="PI58" Value="Process input data word 58"/>
+					<Text TextId="PI59" Value="Process input data word 59"/>
+					<Text TextId="PI60" Value="Process input data word 60"/>
+					<Text TextId="PI61" Value="Process input data word 61"/>
+					<Text TextId="PI62" Value="Process input data word 62"/>
+					<Text TextId="PI63" Value="Process input data word 63"/>
+					<Text TextId="PO0" Value="Process output data word 0"/>
+					<Text TextId="PO1" Value="Process output data word 1"/>
+					<Text TextId="PO2" Value="Process output data word 2"/>
+					<Text TextId="PO3" Value="Process output data word 3"/>
+					<Text TextId="PO4" Value="Process output data word 4"/>
+					<Text TextId="PO5" Value="Process output data word 5"/>
+					<Text TextId="PO6" Value="Process output data word 6"/>
+					<Text TextId="PO7" Value="Process output data word 7"/>
+					<Text TextId="PO8" Value="Process output data word 8"/>
+					<Text TextId="PO9" Value="Process output data word 9"/>
+					<Text TextId="PO10" Value="Process output data word 10"/>
+					<Text TextId="PO11" Value="Process output data word 11"/>
+					<Text TextId="PO12" Value="Process output data word 12"/>
+					<Text TextId="PO13" Value="Process output data word 13"/>
+					<Text TextId="PO14" Value="Process output data word 14"/>
+					<Text TextId="PO15" Value="Process output data word 15"/>
+					<Text TextId="PO16" Value="Process output data word 16"/>
+					<Text TextId="PO17" Value="Process output data word 17"/>
+					<Text TextId="PO18" Value="Process output data word 18"/>
+					<Text TextId="PO19" Value="Process output data word 19"/>
+					<Text TextId="PO20" Value="Process output data word 20"/>
+					<Text TextId="PO21" Value="Process output data word 21"/>
+					<Text TextId="PO22" Value="Process output data word 22"/>
+					<Text TextId="PO23" Value="Process output data word 23"/>
+					<Text TextId="PO24" Value="Process output data word 24"/>
+					<Text TextId="PO25" Value="Process output data word 25"/>
+					<Text TextId="PO26" Value="Process output data word 26"/>
+					<Text TextId="PO27" Value="Process output data word 27"/>
+					<Text TextId="PO28" Value="Process output data word 28"/>
+					<Text TextId="PO29" Value="Process output data word 29"/>
+					<Text TextId="PO30" Value="Process output data word 30"/>
+					<Text TextId="PO31" Value="Process output data word 31"/>
+					<Text TextId="PO32" Value="Process output data word 32"/>
+					<Text TextId="PO33" Value="Process output data word 33"/>
+					<Text TextId="PO34" Value="Process output data word 34"/>
+					<Text TextId="PO35" Value="Process output data word 35"/>
+					<Text TextId="PO36" Value="Process output data word 36"/>
+					<Text TextId="PO37" Value="Process output data word 37"/>
+					<Text TextId="PO38" Value="Process output data word 38"/>
+					<Text TextId="PO39" Value="Process output data word 39"/>
+					<Text TextId="PO40" Value="Process output data word 40"/>
+					<Text TextId="PO41" Value="Process output data word 41"/>
+					<Text TextId="PO42" Value="Process output data word 42"/>
+					<Text TextId="PO43" Value="Process output data word 43"/>
+					<Text TextId="PO44" Value="Process output data word 44"/>
+					<Text TextId="PO45" Value="Process output data word 45"/>
+					<Text TextId="PO46" Value="Process output data word 46"/>
+					<Text TextId="PO47" Value="Process output data word 47"/>
+					<Text TextId="PO48" Value="Process output data word 48"/>
+					<Text TextId="PO49" Value="Process output data word 49"/>
+					<Text TextId="PO50" Value="Process output data word 50"/>
+					<Text TextId="PO51" Value="Process output data word 51"/>
+					<Text TextId="PO52" Value="Process output data word 52"/>
+					<Text TextId="PO53" Value="Process output data word 53"/>
+					<Text TextId="PO54" Value="Process output data word 54"/>
+					<Text TextId="PO55" Value="Process output data word 55"/>
+					<Text TextId="PO56" Value="Process output data word 56"/>
+					<Text TextId="PO57" Value="Process output data word 57"/>
+					<Text TextId="PO58" Value="Process output data word 58"/>
+					<Text TextId="PO59" Value="Process output data word 59"/>
+					<Text TextId="PO60" Value="Process output data word 60"/>
+					<Text TextId="PO61" Value="Process output data word 61"/>
+					<Text TextId="PO62" Value="Process output data word 62"/>
+					<Text TextId="PO63" Value="Process output data word 63"/>
+					<Text TextId="Profinet IO Anschaltung" Value="MOVIPRO"/>
+					<Text TextId="Safety Module" Value="Slot1: PROFISafe Option"/>
+					<Text TextId="Slot not used" Value="Slot not used"/>
+					<Text TextId="PD Channel" Value="Slot2-17: PD Channel"/>
+					<Text TextId="Alarmeinstellung DAP" Value="Alarm settings (head)"/>
+					<Text TextId="Alarmeinstellung SLOT" Value="Alarm settings (slot)"/>
+					<Text TextId="ID_DiagAlarmEnabling" Value="Enable diagnosis alarms"/>
+					<Text TextId="ID_DiagAlarmPort1" Value="Enable diagnosis alarms port 1 (X4232_1)"/>
+					<Text TextId="ID_DiagAlarmPort2" Value="Enable diagnosis alarms port 2 (X4232_2)"/>
+					<Text TextId="ID_BdDxAlarmPort1" Value="Enable baudrate/duplex alarm port 1 (X4232_1)"/>
+					<Text TextId="ID_BdDxAlarmPort2" Value="Enable baudrate/duplex alarm port 2 (X4232_2)"/>
+					<Text TextId="On" Value="On"/>
+					<Text TextId="Off" Value="Off"/>
+					<Text TextId="Keine Überwachung" Value="Monitoring Off"/>
+					<Text TextId="Link Down erzeugt kommenden Alarm" Value="Dignosis Alarm on Link Down"/>
+					<Text TextId="Baudrate 10MBit oder Halbduplex - Mode erzeugt kommenden Alarm" Value="Diagnosis Alarm on 10 MBit or half duplex mode"/>
+					<Text TextId="F25 EEPROM" Value="F25 EEPROM"/>
+					<Text TextId="F37 System-Watchdog" Value="F37 System watchdog"/>
+					<Text TextId="F38 System-Software" Value="F38 System software"/>
+					<Text TextId="F45 Initialisierung" Value="F45 Initialization"/>
+					<Text TextId="F97 Daten kopieren" Value="F97 Copy data"/>
+					<Text TextId="F98 CRC Error Flash" Value="F98 CRC error flash"/>
+					<Text TextId="FS1 Interner Ablauffehler" Value="Internal Operation Error"/>
+					<Text TextId="FS2 Interner Systemfehler" Value="Internal System Error"/>
+					<Text TextId="FS3 Fehler Kommunikation" Value="Communikation Error"/>
+					<Text TextId="FS4 Fehler Elektronikversorgung" Value="Error Electronics Power Supply"/>
+					<Text TextId="FS5 Fehler Lastspannungsversorgung" Value="Error Power Supply"/>
+					<Text TextId="FS6 Versionskonflikt" Value="Mismatch of Safety Version"/>
+					<Text TextId="FS7 Profisafe Adresse" Value="Profisafe Address not defined"/>
+					<Text TextId="FS20 Interner Fehler sicherer Eingang" Value="Internal Error F-DI"/>
+					<Text TextId="FS21 Kurzschluss sicherer Eingang" Value="Shortcut F-DI"/>
+					<Text TextId="FS50 Interner Fehler sicherer Ausgang" Value="Internal Error F-DO"/>
+					<Text TextId="FS51 Kurzschluss sicherer Ausgang" Value="Shortcut F-DO"/>
+					<Text TextId="FS52 Überlast sicherer Ausgang" Value="Overload F-DO"/>
+					<Text TextId="FSX F Option Para" Value="F Init Fault"/>
+					<Text TextId="FS64 FDestAdd ungleich" Value="Mismatch of F Dest Add"/>
+					<Text TextId="FS65 FDestAdd ungültig" Value="F Dest Add not valid"/>
+					<Text TextId="FS66 FSrcAdd ungültig" Value="F Source Add not valid"/>
+					<Text TextId="FS67 F WD Time Null" Value="F WD Time is 0ms"/>
+					<Text TextId="FS68 F SIL" Value="F SIL exceeeds SIL f. application"/>
+					<Text TextId="FS69 F CRC Length" Value="F CRC Length does not match"/>
+					<Text TextId="FS70 F-Parameter" Value="F-Parameter set incorrect"/>
+					<Text TextId="FS71 CRC1 Fault" Value="CRC1 Fault"/>
+					<Text TextId="FS7x Res" Value="Reserved Safety Layer Fault"/>
+					<Text TextId="Switch Port 1 Down" Value="Switch Port 1 (X4232_1) Link Down"/>
+					<Text TextId="Switch Port 2 Down" Value="Switch Port 2 (X4232_2) Link Down"/>
+					<Text TextId="Switch Port 1 BdDx" Value="Switch Port 1 (X4232_1) 10MBit or Halfduplex"/>
+					<Text TextId="Switch Port 2 BdDx" Value="Switch Port 2 (X4232_2) 10MBit or Halfduplex"/>
+					<Text TextId="F25 EEPROM Hilfetext" Value="Possible cause: Access to the EEPROM of the memory card has failed."/>
+					<Text TextId="F37 System-Watchdog Hilfetext" Value="Possible cause: Error during execution of system software. Contact SEW Service."/>
+					<Text TextId="F38 System-Software Hilfetext" Value="Possible cause: System error. Contact SEW Service."/>
+					<Text TextId="F45 Initialisierung Hilfetext" Value="Possible cause: No parameters set for EEPROM in power section, or parameters set incorrectly. Option card not in contact with backplane bus."/>
+					<Text TextId="F97 Daten kopieren Hilfetext" Value="Possible cause: Memory card cannot be written or read. Error during data transmission."/>
+					<Text TextId="F98 CRC Error Flash Hilfetext" Value="Possible cause: Internal unit fault. Flash memory defective."/>
+					<Text TextId="FS1 Interner Ablauffehler Hilfetext" Value="Possible cause: Error during execution of safety option software. Contact SEW Service."/>
+					<Text TextId="FS2 Interner Systemfehler Hilfetext" Value="Possible cause: Error during execution of safety option software. Contact SEW Service."/>
+					<Text TextId="FS3 Fehler Kommunikation Hilfetext" Value="Possible cause: Fieldbus Master Communication Error."/>
+					<Text TextId="FS4 Fehler Elektronikversorgung Hilfetext" Value="Check Electronics Power Supply of Safety Option"/>
+					<Text TextId="FS5 Fehler Lastspannungsversorgung Hilfetext" Value="Check Power Supply of Safety Option"/>
+					<Text TextId="FS6 Versionskonflikt Hilfetext" Value="Change Safety Option"/>
+					<Text TextId="FS7 Profisafe Adresse Hilfetext" Value="Check Profisafe Address."/>
+					<Text TextId="FS20 Interner Fehler sicherer Eingang Hilfetext" Value="Contact SEW Service."/>
+					<Text TextId="FS21 Kurzschluss sicherer Eingang Hilfetext" Value="Check F-DI"/>
+					<Text TextId="FS50 Interner Fehler sicherer Ausgang Hilfetext" Value="Contact SEW Service."/>
+					<Text TextId="FS51 Kurzschluss sicherer Ausgang Hilfetext" Value="Check F-DO"/>
+					<Text TextId="FS52 Überlast sicherer Ausgang Hilfetext" Value="Check F-DO"/>
+					<Text TextId="FSX F Option Para Hilfetext" Value="Set an valid F Destination Addr"/>
+					<Text TextId="FS64 FDestAdd ungleich Hilfetext" Value="Check F Destination addr settings at controller and device."/>
+					<Text TextId="FS65 FDestAdd ungültig Hilfetext" Value="Change F Destination addr setting"/>
+					<Text TextId="FS66 FSrcAdd ungültig Hilfetext" Value="Change F Source addr setting"/>
+					<Text TextId="FS67 F WD Time Null Hilfetext" Value="Change F WD Time setting"/>
+					<Text TextId="FS68 F SIL Hilfetext" Value="Change F SIL setting"/>
+					<Text TextId="FS69 F CRC Length Hilfetext" Value="Change F CRC setting"/>
+					<Text TextId="FS70 F-Parameter Hilfetext" Value="Change F Parameter setting"/>
+					<Text TextId="FS71 CRC1 Fault Hilfetext" Value="Check CRC1"/>
+					<Text TextId="FS7x Res Hilfetext" Value="Reserved"/>
+					<Text TextId="Switch Port 1 Down Hilfetext" Value="Check cable."/>
+					<Text TextId="Switch Port 2 Down Hilfetext" Value="Check cable."/>
+					<Text TextId="Switch Port 1 BdDx Hilfetext" Value="100Mbit full duplex requiered."/>
+					<Text TextId="Switch Port 2 BdDx Hilfetext" Value="100Mbit full duplex requiered."/>
+				</PrimaryLanguage>
+				<Language xml:lang="de">
+					<Text TextId="SEW MOVIPRO" Value="SEW MOVIPRO"/>
+					<Text TextId="MOVIPRO1" Value="MOVIPRO V1.0 ALT"/>
+					<Text TextId="MOVIPRO1 PDEV V70" Value="MOVIPRO V7.0"/>
+					<Text TextId="MOVIPRO1 PDEV MRP V77" Value="MOVIPRO V7.7"/>
+					<Text TextId="MOVIPRO1 PDEV V11" Value="MOVIPRO V1.1"/>
+					<Text TextId="MOVIPRO1 PDEV POF V15" Value="MOVIPRO V1.5 FO V70"/>
+					<Text TextId="MOVIPRO1 PDEV MRP V17" Value="MOVIPRO V1.7"/>
+					<Text TextId="MOVIPRO1 PDEV POF MRP V17" Value="MOVIPRO V1.7 FO V71"/>
+					<Text TextId="MOVIPROAM mit PROFINET IO Interface PDEV" Value="MOVIPRO A- mit PROFINET IO Interface (incl. Topologieerkennung); Firmwareversion 7.x"/>
+					<Text TextId="MOVIPROAM mit PROFINET IO Interface PDEV MRP" Value="MOVIPRO A- mit PROFINET IO Interface (incl. Topologieerkennung und MRP Medienredundanzfähigkeit); Firmwareversion 7.7 und höher"/>
+					<Text TextId="MOVIPRO1 mit PROFINET IO Interface" Value="MOVIPRO mit PROFINET IO Interface (für alte S7 ohne Topologieerkennung)"/>
+					<Text TextId="MOVIPRO1 mit PROFINET IO Interface PDEV" Value="MOVIPRO mit PROFINET IO Interface (incl. Topologieerkennung); Firmwareversion 1.1 und höher"/>
+					<Text TextId="MOVIPRO1 mit PROFINET IO Interface PDEV POF" Value="MOVIPRO mit PROFINET IO LWL Interface (incl. Topologieerkennung); LWL-Konverter Hardwareversion: 70; Firmwareversion 1.5 und höher"/>
+					<Text TextId="MOVIPRO1 mit PROFINET IO Interface PDEV MRP" Value="MOVIPRO with PROFINET IO Interface (incl. Topologieerkennung und MRP Medienredundanzfähigkeit); Firmwareversion 1.7 und höher"/>
+					<Text TextId="MOVIPRO1 mit PROFINET IO Interface PDEV POF MRP" Value="MOVIPRO with PROFINET IO FO Interface (incl. Topologieerkennung und MRP Medienredundanzfähigkeit); LWL-Konverter Hardwareversion: 71; Firmwareversion 1.7 und höher"/>
+					<Text TextId="PDEV_Interface" Value="X1"/>
+					<Text TextId="PDEV_Port1" Value="P1"/>
+					<Text TextId="PDEV_Port2" Value="P2"/>
+					<Text TextId="T_DAP_InterfaceModule" Value="Ethernet Interface"/>
+					<Text TextId="T_Port1" Value="Port 1 - RJ45 (X4232_1)"/>
+					<Text TextId="T_Port2" Value="Port 2 - RJ45 (X4232_2)"/>
+					<Text TextId="T_Port1_POF" Value="Port 1 - SCRJ (X4234_11)"/>
+					<Text TextId="T_Port2_POF" Value="Port 2 - SCRJ (X4234_12)"/>
+					<Text TextId="Leermodul" Value="Leerplatz"/>
+					<Text TextId="Info Leermodul" Value="Leerplatz, kein Modul gesteckt"/>
+					<Text TextId="F-Modul I/O (2 Byte)" Value="F-Modul I/O (2 Byte)"/>
+					<Text TextId="F-Modul I/O (12 Byte)" Value="F-Modul I/O (12 Byte)"/>
+					<Text TextId="Safety Module I/O (2 Byte)" Value="Sicheres E/A Modul (2 Byte)"/>
+					<Text TextId="Safety Module I/O (12 Byte)" Value="Sicheres E/A Modul (12 Byte)"/>
+					<Text TextId="FDI" Value="FDI"/>
+					<Text TextId="FDI1" Value="FDI 1"/>
+					<Text TextId="FDI2" Value="FDI 2"/>
+					<Text TextId="FPI1" Value="F Prozessdaten 1"/>
+					<Text TextId="FPI2" Value="F Prozessdaten 2"/>
+					<Text TextId="Safety" Value="Safety"/>
+					<Text TextId="FDO" Value="FDO"/>
+					<Text TextId="FDO1" Value="FDO 1"/>
+					<Text TextId="FDO2" Value="FDO 2"/>
+					<Text TextId="FPO1" Value="F Prozessdaten 1"/>
+					<Text TextId="FPO2" Value="F Prozessdaten 2"/>
+					<Text TextId="1PD" Value="01 Prozessdatenwort"/>
+					<Text TextId="2PD" Value="02 Prozessdatenworte"/>
+					<Text TextId="3PD" Value="03 Prozessdatenworte"/>
+					<Text TextId="4PD" Value="04 Prozessdatenworte"/>
+					<Text TextId="5PD" Value="05 Prozessdatenworte"/>
+					<Text TextId="6PD" Value="06 Prozessdatenworte"/>
+					<Text TextId="7PD" Value="07 Prozessdatenworte"/>
+					<Text TextId="8PD" Value="08 Prozessdatenworte"/>
+					<Text TextId="9PD" Value="09 Prozessdatenworte"/>
+					<Text TextId="10PD" Value="10 Prozessdatenworte"/>
+					<Text TextId="11 PD" Value="11 Prozessdatenworte"/>
+					<Text TextId="12 PD" Value="12 Prozessdatenworte"/>
+					<Text TextId="13 PD" Value="13 Prozessdatenworte"/>
+					<Text TextId="14 PD" Value="14 Prozessdatenworte"/>
+					<Text TextId="15 PD" Value="15 Prozessdatenworte"/>
+					<Text TextId="16 PD" Value="16 Prozessdatenworte"/>
+					<Text TextId="18 PD" Value="18 Prozessdatenworte"/>
+					<Text TextId="21 PD" Value="21 Prozessdatenworte"/>
+					<Text TextId="24 PD" Value="24 Prozessdatenworte"/>
+					<Text TextId="32 PD" Value="32 Prozessdatenworte"/>
+					<Text TextId="64 PD" Value="64 Prozessdatenworte"/>
+					<Text TextId="PI0" Value="Prozesseingangsdatenwort 0"/>
+					<Text TextId="PI1" Value="Prozesseingangsdatenwort 1"/>
+					<Text TextId="PI2" Value="Prozesseingangsdatenwort 2"/>
+					<Text TextId="PI3" Value="Prozesseingangsdatenwort 3"/>
+					<Text TextId="PI4" Value="Prozesseingangsdatenwort 4"/>
+					<Text TextId="PI5" Value="Prozesseingangsdatenwort 5"/>
+					<Text TextId="PI6" Value="Prozesseingangsdatenwort 6"/>
+					<Text TextId="PI7" Value="Prozesseingangsdatenwort 7"/>
+					<Text TextId="PI8" Value="Prozesseingangsdatenwort 8"/>
+					<Text TextId="PI9" Value="Prozesseingangsdatenwort 9"/>
+					<Text TextId="PI10" Value="Prozesseingangsdatenwort 10"/>
+					<Text TextId="PI11" Value="Prozesseingangsdatenwort 11"/>
+					<Text TextId="PI12" Value="Prozesseingangsdatenwort 12"/>
+					<Text TextId="PI13" Value="Prozesseingangsdatenwort 13"/>
+					<Text TextId="PI14" Value="Prozesseingangsdatenwort 14"/>
+					<Text TextId="PI15" Value="Prozesseingangsdatenwort 15"/>
+					<Text TextId="PI16" Value="Prozesseingangsdatenwort 16"/>
+					<Text TextId="PI17" Value="Prozesseingangsdatenwort 17"/>
+					<Text TextId="PI18" Value="Prozesseingangsdatenwort 18"/>
+					<Text TextId="PI19" Value="Prozesseingangsdatenwort 19"/>
+					<Text TextId="PI20" Value="Prozesseingangsdatenwort 20"/>
+					<Text TextId="PI21" Value="Prozesseingangsdatenwort 21"/>
+					<Text TextId="PI22" Value="Prozesseingangsdatenwort 22"/>
+					<Text TextId="PI23" Value="Prozesseingangsdatenwort 23"/>
+					<Text TextId="PI24" Value="Prozesseingangsdatenwort 24"/>
+					<Text TextId="PI25" Value="Prozesseingangsdatenwort 25"/>
+					<Text TextId="PI26" Value="Prozesseingangsdatenwort 26"/>
+					<Text TextId="PI27" Value="Prozesseingangsdatenwort 27"/>
+					<Text TextId="PI28" Value="Prozesseingangsdatenwort 28"/>
+					<Text TextId="PI29" Value="Prozesseingangsdatenwort 29"/>
+					<Text TextId="PI30" Value="Prozesseingangsdatenwort 30"/>
+					<Text TextId="PI31" Value="Prozesseingangsdatenwort 31"/>
+					<Text TextId="PI32" Value="Prozesseingangsdatenwort 32"/>
+					<Text TextId="PI33" Value="Prozesseingangsdatenwort 33"/>
+					<Text TextId="PI34" Value="Prozesseingangsdatenwort 34"/>
+					<Text TextId="PI35" Value="Prozesseingangsdatenwort 35"/>
+					<Text TextId="PI36" Value="Prozesseingangsdatenwort 36"/>
+					<Text TextId="PI37" Value="Prozesseingangsdatenwort 37"/>
+					<Text TextId="PI38" Value="Prozesseingangsdatenwort 38"/>
+					<Text TextId="PI39" Value="Prozesseingangsdatenwort 39"/>
+					<Text TextId="PI40" Value="Prozesseingangsdatenwort 40"/>
+					<Text TextId="PI41" Value="Prozesseingangsdatenwort 41"/>
+					<Text TextId="PI42" Value="Prozesseingangsdatenwort 42"/>
+					<Text TextId="PI43" Value="Prozesseingangsdatenwort 43"/>
+					<Text TextId="PI44" Value="Prozesseingangsdatenwort 44"/>
+					<Text TextId="PI45" Value="Prozesseingangsdatenwort 45"/>
+					<Text TextId="PI46" Value="Prozesseingangsdatenwort 46"/>
+					<Text TextId="PI47" Value="Prozesseingangsdatenwort 47"/>
+					<Text TextId="PI48" Value="Prozesseingangsdatenwort 48"/>
+					<Text TextId="PI49" Value="Prozesseingangsdatenwort 49"/>
+					<Text TextId="PI50" Value="Prozesseingangsdatenwort 50"/>
+					<Text TextId="PI51" Value="Prozesseingangsdatenwort 51"/>
+					<Text TextId="PI52" Value="Prozesseingangsdatenwort 52"/>
+					<Text TextId="PI53" Value="Prozesseingangsdatenwort 53"/>
+					<Text TextId="PI54" Value="Prozesseingangsdatenwort 54"/>
+					<Text TextId="PI55" Value="Prozesseingangsdatenwort 55"/>
+					<Text TextId="PI56" Value="Prozesseingangsdatenwort 56"/>
+					<Text TextId="PI57" Value="Prozesseingangsdatenwort 57"/>
+					<Text TextId="PI58" Value="Prozesseingangsdatenwort 58"/>
+					<Text TextId="PI59" Value="Prozesseingangsdatenwort 59"/>
+					<Text TextId="PI60" Value="Prozesseingangsdatenwort 60"/>
+					<Text TextId="PI61" Value="Prozesseingangsdatenwort 61"/>
+					<Text TextId="PI62" Value="Prozesseingangsdatenwort 62"/>
+					<Text TextId="PI63" Value="Prozesseingangsdatenwort 63"/>
+					<Text TextId="PO0" Value="Prozessausgangsdatenwort 0"/>
+					<Text TextId="PO1" Value="Prozessausgangsdatenwort 1"/>
+					<Text TextId="PO2" Value="Prozessausgangsdatenwort 2"/>
+					<Text TextId="PO3" Value="Prozessausgangsdatenwort 3"/>
+					<Text TextId="PO4" Value="Prozessausgangsdatenwort 4"/>
+					<Text TextId="PO5" Value="Prozessausgangsdatenwort 5"/>
+					<Text TextId="PO6" Value="Prozessausgangsdatenwort 6"/>
+					<Text TextId="PO7" Value="Prozessausgangsdatenwort 7"/>
+					<Text TextId="PO8" Value="Prozessausgangsdatenwort 8"/>
+					<Text TextId="PO9" Value="Prozessausgangsdatenwort 9"/>
+					<Text TextId="PO10" Value="Prozessausgangsdatenwort 10"/>
+					<Text TextId="PO11" Value="Prozessausgangsdatenwort 11"/>
+					<Text TextId="PO12" Value="Prozessausgangsdatenwort 12"/>
+					<Text TextId="PO13" Value="Prozessausgangsdatenwort 13"/>
+					<Text TextId="PO14" Value="Prozessausgangsdatenwort 14"/>
+					<Text TextId="PO15" Value="Prozessausgangsdatenwort 15"/>
+					<Text TextId="PO16" Value="Prozessausgangsdatenwort 16"/>
+					<Text TextId="PO17" Value="Prozessausgangsdatenwort 17"/>
+					<Text TextId="PO18" Value="Prozessausgangsdatenwort 18"/>
+					<Text TextId="PO19" Value="Prozessausgangsdatenwort 19"/>
+					<Text TextId="PO20" Value="Prozessausgangsdatenwort 20"/>
+					<Text TextId="PO21" Value="Prozessausgangsdatenwort 21"/>
+					<Text TextId="PO22" Value="Prozessausgangsdatenwort 22"/>
+					<Text TextId="PO23" Value="Prozessausgangsdatenwort 23"/>
+					<Text TextId="PO24" Value="Prozessausgangsdatenwort 24"/>
+					<Text TextId="PO25" Value="Prozessausgangsdatenwort 25"/>
+					<Text TextId="PO26" Value="Prozessausgangsdatenwort 26"/>
+					<Text TextId="PO27" Value="Prozessausgangsdatenwort 27"/>
+					<Text TextId="PO28" Value="Prozessausgangsdatenwort 28"/>
+					<Text TextId="PO29" Value="Prozessausgangsdatenwort 29"/>
+					<Text TextId="PO30" Value="Prozessausgangsdatenwort 30"/>
+					<Text TextId="PO31" Value="Prozessausgangsdatenwort 31"/>
+					<Text TextId="PO32" Value="Prozessausgangsdatenwort 32"/>
+					<Text TextId="PO33" Value="Prozessausgangsdatenwort 33"/>
+					<Text TextId="PO34" Value="Prozessausgangsdatenwort 34"/>
+					<Text TextId="PO35" Value="Prozessausgangsdatenwort 35"/>
+					<Text TextId="PO36" Value="Prozessausgangsdatenwort 36"/>
+					<Text TextId="PO37" Value="Prozessausgangsdatenwort 37"/>
+					<Text TextId="PO38" Value="Prozessausgangsdatenwort 38"/>
+					<Text TextId="PO39" Value="Prozessausgangsdatenwort 39"/>
+					<Text TextId="PO40" Value="Prozessausgangsdatenwort 40"/>
+					<Text TextId="PO41" Value="Prozessausgangsdatenwort 41"/>
+					<Text TextId="PO42" Value="Prozessausgangsdatenwort 42"/>
+					<Text TextId="PO43" Value="Prozessausgangsdatenwort 43"/>
+					<Text TextId="PO44" Value="Prozessausgangsdatenwort 44"/>
+					<Text TextId="PO45" Value="Prozessausgangsdatenwort 45"/>
+					<Text TextId="PO46" Value="Prozessausgangsdatenwort 46"/>
+					<Text TextId="PO47" Value="Prozessausgangsdatenwort 47"/>
+					<Text TextId="PO48" Value="Prozessausgangsdatenwort 48"/>
+					<Text TextId="PO49" Value="Prozessausgangsdatenwort 49"/>
+					<Text TextId="PO50" Value="Prozessausgangsdatenwort 50"/>
+					<Text TextId="PO51" Value="Prozessausgangsdatenwort 51"/>
+					<Text TextId="PO52" Value="Prozessausgangsdatenwort 52"/>
+					<Text TextId="PO53" Value="Prozessausgangsdatenwort 53"/>
+					<Text TextId="PO54" Value="Prozessausgangsdatenwort 54"/>
+					<Text TextId="PO55" Value="Prozessausgangsdatenwort 55"/>
+					<Text TextId="PO56" Value="Prozessausgangsdatenwort 56"/>
+					<Text TextId="PO57" Value="Prozessausgangsdatenwort 57"/>
+					<Text TextId="PO58" Value="Prozessausgangsdatenwort 58"/>
+					<Text TextId="PO59" Value="Prozessausgangsdatenwort 59"/>
+					<Text TextId="PO60" Value="Prozessausgangsdatenwort 60"/>
+					<Text TextId="PO61" Value="Prozessausgangsdatenwort 61"/>
+					<Text TextId="PO62" Value="Prozessausgangsdatenwort 62"/>
+					<Text TextId="PO63" Value="Prozessausgangsdatenwort 63"/>
+					<Text TextId="Profinet IO Anschaltung" Value="MOVIPRO"/>
+					<Text TextId="Slot not used" Value="Leerplatz"/>
+					<Text TextId="Safety Module" Value="Slot1: PROFISafe Option"/>
+					<Text TextId="PD Channel" Value="Slot2-17: PD Kanal"/>
+					<Text TextId="Alarmeinstellung DAP" Value="Alarmeinstellungen (Kopf)"/>
+					<Text TextId="Alarmeinstellung SLOT" Value="Alarmeinstellungen (Steckplatz)"/>
+					<Text TextId="ID_DiagAlarmEnabling" Value="Diagnose - Alarme aktivieren"/>
+					<Text TextId="ID_DiagAlarmPort1" Value="Diagnose - Alarm Port 1 aktivieren (X4232_1)"/>
+					<Text TextId="ID_DiagAlarmPort2" Value="Diagnose - Alarm Port 2 aktivieren (X4232_2)"/>
+					<Text TextId="ID_BdDxAlarmPort1" Value="Baudrate/Duplex - Alarm Port 1 aktivieren (X4232_1)"/>
+					<Text TextId="ID_BdDxAlarmPort2" Value="Baudrate/Duplex - Alarm Port 2 aktivieren (X4232_2)"/>
+					<Text TextId="On" Value="Ein"/>
+					<Text TextId="Off" Value="Aus"/>
+					<Text TextId="Keine Überwachung" Value="Keine Überwachung"/>
+					<Text TextId="Link Down erzeugt kommenden Alarm" Value="Link Down erzeugt kommenden Alarm"/>
+					<Text TextId="Baudrate 10MBit oder Halbduplex - Mode erzeugt kommenden Alarm" Value="Baudrate 10MBit oder Halbduplex - Mode erzeugt kommenden Alarm"/>
+					<Text TextId="F25 EEPROM" Value="F25 EEPROM"/>
+					<Text TextId="F37 System-Watchdog" Value="F37 System-Watchdog"/>
+					<Text TextId="F38 System-Software" Value="F38 System-Software"/>
+					<Text TextId="F45 Initialisierung" Value="F45 Initialisierung"/>
+					<Text TextId="F97 Daten kopieren" Value="F97 Daten kopieren"/>
+					<Text TextId="F98 CRC Error Flash" Value="F98 CRC Error Flash"/>
+					<Text TextId="FS1 Interner Ablauffehler" Value="Interner Ablauffehler"/>
+					<Text TextId="FS2 Interner Systemfehler" Value="Interner Systemfehler"/>
+					<Text TextId="FS3 Fehler Kommunikation" Value="Fehler Kommunikation"/>
+					<Text TextId="FS4 Fehler Elektronikversorgung" Value="Fehler Elektronikversorgung"/>
+					<Text TextId="FS5 Fehler Lastspannungsversorgung" Value="Fehler Lastspannungsversorgung"/>
+					<Text TextId="FS6 Versionskonflikt" Value="Versionskonflikt Safety Option"/>
+					<Text TextId="FS7 Profisafe Adresse" Value="Profisafe Adresse nicht vergeben"/>
+					<Text TextId="FS20 Interner Fehler sicherer Eingang" Value="Interner Fehler sicherer Eingang"/>
+					<Text TextId="FS21 Kurzschluss sicherer Eingang" Value="Kurzschluss sicherer Eingang"/>
+					<Text TextId="FS50 Interner Fehler sicherer Ausgang" Value="Interner Fehler sicherer Ausgang"/>
+					<Text TextId="FS51 Kurzschluss sicherer Ausgang" Value="Kurzschluss sicherer Ausgang"/>
+					<Text TextId="FS52 Überlast sicherer Ausgang" Value="Überlast sicherer Ausgang"/>
+					<Text TextId="FSX F Option Para" Value="F Init Fehler"/>
+					<Text TextId="FS64 FDestAdd ungleich" Value="F Dest Add stimmt nicht überein"/>
+					<Text TextId="FS65 FDestAdd ungültig" Value="F Dest Add ist ungültig"/>
+					<Text TextId="FS66 FSrcAdd ungültig" Value="F Source Add ist ungültig"/>
+					<Text TextId="FS67 F WD Time Null" Value="F WD Time ist 0ms"/>
+					<Text TextId="FS68 F SIL" Value="F SIL grösser als max SIL Level"/>
+					<Text TextId="FS69 F CRC Length" Value="Falsche F CRC Length "/>
+					<Text TextId="FS70 F-Parameter" Value="Falsche F-Parameter Version"/>
+					<Text TextId="FS71 CRC1 Fault" Value="Fehler im CRC1 Wert"/>
+					<Text TextId="FS7x Res" Value="Reservierter Fehler des Safety Layer"/>
+					<Text TextId="Switch Port 1 Down" Value="Switch Port 1 (X4232_1) Link Down"/>
+					<Text TextId="Switch Port 2 Down" Value="Switch Port 2 (X4232_2) Link Down"/>
+					<Text TextId="Switch Port 1 BdDx" Value="Switch Port 1 (X4232_1) 10MBit oder Halbduplex"/>
+					<Text TextId="Switch Port 2 BdDx" Value="Switch Port 2 (X4232_2) 10MBit oder Halbduplex"/>
+					<Text TextId="F25 EEPROM Hilfetext" Value="Mögliche Ursache(n): Fehler beim Zugriff auf das EEPROM oder die Speicherkarte.:"/>
+					<Text TextId="F37 System-Watchdog Hilfetext" Value="Mögliche Ursache(n): Fehler im Ablauf der Systemsoftware, SEW Service zu Rate ziehen."/>
+					<Text TextId="F38 System-Software Hilfetext" Value="Mögliche Ursache(n): Systemstörung, SEW Service zu Rate ziehen"/>
+					<Text TextId="F45 Initialisierung Hilfetext" Value="Mögliche Ursache(n): EEPROM im Leistungteil nicht oder falsch parametriert. Optionkarte hat keinen Kontakt zum Rückwandbus."/>
+					<Text TextId="F97 Daten kopieren Hilfetext" Value="Mögliche Ursache(n): Speicherkarte kann nicht gelesen oder geschrieben werden. Fehler bei der Datenübertragung."/>
+					<Text TextId="F98 CRC Error Flash Hilfetext" Value="Mögliche Ursache(n): Interner Gerätefehler, Flashspeicher defekt."/>
+					<Text TextId="FS1 Interner Ablauffehler Hilfetext" Value="Mögliche Ursache:Fehler im Ablauf der Sicherheits - Software, SEW Service zu Rate  ziehen."/>
+					<Text TextId="FS2 Interner Systemfehler Hilfetext" Value="Mögliche Ursache:Fehler im Ablauf der Sicherheits - Software, SEW Service zu Rate  ziehen."/>
+					<Text TextId="FS3 Fehler Kommunikation Hilfetext" Value="Mögliche Ursache: Fehler in der Kommunikation mit dem Feldbus Master."/>
+					<Text TextId="FS4 Fehler Elektronikversorgung Hilfetext" Value="Prüfen Sie die Versorgung der Safety - Elektronik"/>
+					<Text TextId="FS5 Fehler Lastspannungsversorgung Hilfetext" Value="Prüfen Sie die Lastspannungs - Versorgung der Safety - Elektronik"/>
+					<Text TextId="FS6 Versionskonflikt Hilfetext" Value="Safety Option tauschen"/>
+					<Text TextId="FS7 Profisafe Adresse Hilfetext" Value="Stellen Sie eine gültige Profisafe Adresse ein."/>
+					<Text TextId="FS20 Interner Fehler sicherer Eingang Hilfetext" Value="SEW Service zu Rate ziehen."/>
+					<Text TextId="FS21 Kurzschluss sicherer Eingang Hilfetext" Value="Prüfen Sie die Verkabelung der F-DI"/>
+					<Text TextId="FS50 Interner Fehler sicherer Ausgang Hilfetext" Value="SEW Service zu Rate ziehen."/>
+					<Text TextId="FS51 Kurzschluss sicherer Ausgang Hilfetext" Value="Prüfen Sie die Verkabelung der F-DO"/>
+					<Text TextId="FS52 Überlast sicherer Ausgang Hilfetext" Value="Prüfen Sie die Belastung der F-DO"/>
+					<Text TextId="FSX F Option Para Hilfetext" Value="Stellen Sie eine gültige F Destination Adresse ein"/>
+					<Text TextId="FS64 FDestAdd ungleich Hilfetext" Value="Vergleichen Sie die projektierte und im Gerät eingestellte F Destination Adresse"/>
+					<Text TextId="FS65 FDestAdd ungültig Hilfetext" Value="Ändern Sie die Einstellung für die F Destination Adresse"/>
+					<Text TextId="FS66 FSrcAdd ungültig Hilfetext" Value="Ändern Sie die Einstellung für die F Source Adresse"/>
+					<Text TextId="FS67 F WD Time Null Hilfetext" Value="Ändern Sie die Einstellung für die F WD Time"/>
+					<Text TextId="FS68 F SIL Hilfetext" Value="Ändern Sie die Einstellung für die F SIL"/>
+					<Text TextId="FS69 F CRC Length Hilfetext" Value="Ändern Sie die Einstellung für die F CRC"/>
+					<Text TextId="FS70 F-Parameter Hilfetext" Value="Ändern Sie die Einstellung für die F Parameter"/>
+					<Text TextId="FS71 CRC1 Fault Hilfetext" Value="Prüfen Sie die CRC1"/>
+					<Text TextId="FS7x Res Hilfetext" Value="Reserviert"/>
+					<Text TextId="Switch Port 1 Down Hilfetext" Value="Prüfen Sie das Ethernet Kabel."/>
+					<Text TextId="Switch Port 2 Down Hilfetext" Value="Prüfen Sie das Ethernet Kabel."/>
+					<Text TextId="Switch Port 1 BdDx Hilfetext" Value="Profinet erfordert 100MBit Vollduplex."/>
+					<Text TextId="Switch Port 2 BdDx Hilfetext" Value="Profinet erfordert 100MBit Vollduplex."/>
+				</Language>
+			</ExternalTextList>
+		</ApplicationProcess>
+	</ProfileBody>
+</ISO15745Profile>
